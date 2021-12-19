@@ -1,6 +1,3 @@
-Python Machine Learning - Code Examples
-
-
 ##  Chapter 2: Training Simple Machine Learning Algorithms for Classification
 
 ### Chapter Outline
