@@ -1,4 +1,4 @@
-# Machine Learnign with PyTorch and Scikit-Learn Book
+# *Machine Learning with PyTorch and Scikit-Learn* Book
 
 ##  Code Repository
 
