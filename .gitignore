@@ -1,3 +1,9 @@
+# Datasets and temporary PyTorch files
+ch12/MNIST
+ch12/celeba
+ch12/iris_classifier_state.pt
+ch12/iris_classifier.pt
+
 # Test Suites
 .coverage*
 .pytest_cache/
