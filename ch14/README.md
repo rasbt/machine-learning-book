@@ -1,5 +1,3 @@
-Python Machine Learning - Code Examples
-
 
 ##  Chapter 14: Classifying Images with Deep Convolutional Neural Networks
 

@@ -1,4 +1,4 @@
-Python Machine Learning - Code Examples
+
 
 
 ##  Chapter 15: Modeling Sequential Data Using Recurrent Neural Networks
@@ -30,5 +30,4 @@ Python Machine Learning - Code Examples
 - Summary
 
 **Please refer to the [README.md](../ch01/README.md) file in [`../ch01`](../ch01) for more information about running the code examples.**
-
 
