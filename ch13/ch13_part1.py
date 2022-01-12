@@ -138,7 +138,7 @@ print(w)
 
 class MyModule(nn.Module):
     def __init__(self):
-        super(MyModule, self).__init__()
+        super().__init__()
         self.w1 = torch.empty(2, 3, requires_grad=True)
         nn.init.xavier_normal_(self.w1)
         self.w2 = torch.empty(1, 2, requires_grad=True)
@@ -372,7 +372,7 @@ ax.set_xlabel('Epochs', size=15)
 
 class MyModule(nn.Module):
     def __init__(self):
-        super(MyModule, self).__init__()
+        super().__init__()
         l1 = nn.Linear(2, 4)
         a1 = nn.ReLU()
         l2 = nn.Linear(4, 4)
@@ -483,7 +483,7 @@ print(noisy_layer(x, training=False))
 
 class MyNoisyModule(nn.Module):
     def __init__(self):
-        super(MyNoisyModule, self).__init__()
+        super().__init__()
         self.l1 = NoisyLinear(2, 4, 0.07)
         self.a1 = nn.ReLU()
         self.l2 = nn.Linear(4, 4)
@@ -575,11 +575,6 @@ plt.show()
 # ---
 # 
 # Readers may ignore the next cell.
-
-
-
-
-
 
 
 
