@@ -54,7 +54,8 @@ d = {
     'scipy': '1.7.0',
     'matplotlib': '3.4.3',
     'sklearn': '1.0',
-    'pandas': '1.3.2'
+    'pandas': '1.3.2',
+    'xgboost': '1.5.0',
 }
 check_packages(d)
 
@@ -142,7 +143,7 @@ plt.xlabel('Base error')
 plt.ylabel('Base/Ensemble error')
 plt.legend(loc='upper left')
 plt.grid(alpha=0.5)
-#plt.savefig('images/07_03.png', dpi=300)
+#plt.savefig('figures/07_03.png', dpi=300)
 plt.show()
 
 
@@ -297,7 +298,7 @@ class MajorityVoteClassifier(BaseEstimator,
     def get_params(self, deep=True):
         """ Get classifier parameter names for GridSearch"""
         if not deep:
-            return super(MajorityVoteClassifier, self).get_params(deep=False)
+            return super().get_params(deep=False)
         else:
             out = self.named_classifiers.copy()
             for name, step in self.named_classifiers.items():
@@ -414,7 +415,7 @@ plt.xlabel('False positive rate (FPR)')
 plt.ylabel('True positive rate (TPR)')
 
 
-#plt.savefig('images/07_04', dpi=300)
+#plt.savefig('figures/07_04', dpi=300)
 plt.show()
 
 
@@ -474,7 +475,7 @@ plt.text(-12.5, 4.5,
          ha='center', va='center', 
          fontsize=12, rotation=90)
 
-#plt.savefig('images/07_05', dpi=300)
+#plt.savefig('figures/07_05', dpi=300)
 plt.show()
 
 
@@ -683,7 +684,7 @@ plt.text(0, -0.2,
          fontsize=12,
          transform=axarr[1].transAxes)
 
-#plt.savefig('images/07_08.png', dpi=300, bbox_inches='tight')
+#plt.savefig('figures/07_08.png', dpi=300, bbox_inches='tight')
 plt.show()
 
 
@@ -816,7 +817,7 @@ plt.text(0, -0.2,
          fontsize=12,
          transform=axarr[1].transAxes)
 
-#plt.savefig('images/07_11.png', dpi=300, bbox_inches='tight')
+#plt.savefig('figures/07_11.png', dpi=300, bbox_inches='tight')
 plt.show()
 
 

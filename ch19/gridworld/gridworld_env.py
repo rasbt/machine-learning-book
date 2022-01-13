@@ -122,7 +122,7 @@ class GridWorldEnv(discrete.DiscreteEnv):
         isd = np.zeros(nS)
         isd[0] = 1.0
 
-        super(GridWorldEnv, self).__init__(nS, nA, P, isd)
+        super().__init__(nS, nA, P, isd)
 
         self.viewer = None
         self._build_display(gold_cell, trap_cells)

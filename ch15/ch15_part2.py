@@ -223,7 +223,7 @@ print(embedding(text_encoded_input))
 # Fully connected neural network with one hidden layer
 class RNN(nn.Module):
     def __init__(self, input_size, hidden_size):
-        super(RNN, self).__init__()
+        super().__init__()
         self.rnn = nn.RNN(input_size, 
                           hidden_size, 
                           num_layers=2, 
@@ -251,7 +251,7 @@ model(torch.randn(5, 3, 64))
 
 class RNN(nn.Module):
     def __init__(self, vocab_size, embed_dim, rnn_hidden_size, fc_hidden_size):
-        super(RNN, self).__init__()
+        super().__init__()
         self.embedding = nn.Embedding(vocab_size, 
                                       embed_dim, 
                                       padding_idx=0) 
@@ -340,7 +340,7 @@ print(f'test_accuracy: {acc_test:.4f}')
 
 class RNN(nn.Module):
     def __init__(self, vocab_size, embed_dim, rnn_hidden_size, fc_hidden_size):
-        super(RNN, self).__init__()
+        super().__init__()
         self.embedding = nn.Embedding(vocab_size, 
                                       embed_dim, 
                                       padding_idx=0) 

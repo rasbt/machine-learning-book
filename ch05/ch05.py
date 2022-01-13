@@ -209,7 +209,7 @@ plt.ylabel('Explained variance ratio')
 plt.xlabel('Principal component index')
 plt.legend(loc='best')
 plt.tight_layout()
-# plt.savefig('images/05_02.png', dpi=300)
+# plt.savefig('figures/05_02.png', dpi=300)
 plt.show()
 
 
@@ -264,7 +264,7 @@ plt.xlabel('PC 1')
 plt.ylabel('PC 2')
 plt.legend(loc='lower left')
 plt.tight_layout()
-# plt.savefig('images/05_03.png', dpi=300)
+# plt.savefig('figures/05_03.png', dpi=300)
 plt.show()
 
 
@@ -360,7 +360,7 @@ plt.xlabel('PC 1')
 plt.ylabel('PC 2')
 plt.legend(loc='lower left')
 plt.tight_layout()
-# plt.savefig('images/05_04.png', dpi=300)
+# plt.savefig('figures/05_04.png', dpi=300)
 plt.show()
 
 
@@ -371,7 +371,7 @@ plt.xlabel('PC 1')
 plt.ylabel('PC 2')
 plt.legend(loc='lower left')
 plt.tight_layout()
-# plt.savefig('images/05_05.png', dpi=300)
+# plt.savefig('figures/05_05.png', dpi=300)
 plt.show()
 
 
@@ -397,7 +397,7 @@ ax.set_xticklabels(df_wine.columns[1:], rotation=90)
 
 plt.ylim([-1, 1])
 plt.tight_layout()
-plt.savefig('images/05_05_02.png', dpi=300)
+plt.savefig('figures/05_05_02.png', dpi=300)
 plt.show()
 
 
@@ -419,7 +419,7 @@ ax.set_xticklabels(df_wine.columns[1:], rotation=90)
 
 plt.ylim([-1, 1])
 plt.tight_layout()
-plt.savefig('images/05_05_03.png', dpi=300)
+plt.savefig('figures/05_05_03.png', dpi=300)
 plt.show()
 
 
@@ -555,7 +555,7 @@ plt.xlabel('Linear discriminants')
 plt.ylim([-0.1, 1.1])
 plt.legend(loc='best')
 plt.tight_layout()
-#plt.savefig('images/05_07.png', dpi=300)
+#plt.savefig('figures/05_07.png', dpi=300)
 plt.show()
 
 
@@ -584,7 +584,7 @@ plt.xlabel('LD 1')
 plt.ylabel('LD 2')
 plt.legend(loc='lower right')
 plt.tight_layout()
-plt.savefig('images/05_08.png', dpi=300)
+plt.savefig('figures/05_08.png', dpi=300)
 plt.show()
 
 
@@ -609,7 +609,7 @@ plt.xlabel('LD 1')
 plt.ylabel('LD 2')
 plt.legend(loc='lower left')
 plt.tight_layout()
-# plt.savefig('images/05_09.png', dpi=300)
+# plt.savefig('figures/05_09.png', dpi=300)
 plt.show()
 
 
@@ -622,7 +622,7 @@ plt.xlabel('LD 1')
 plt.ylabel('LD 2')
 plt.legend(loc='lower left')
 plt.tight_layout()
-# plt.savefig('images/05_10.png', dpi=300)
+# plt.savefig('figures/05_10.png', dpi=300)
 plt.show()
 
 
@@ -645,7 +645,7 @@ fig, ax = plt.subplots(1, 4)
 for i in range(4):
     ax[i].imshow(digits.images[i], cmap='Greys')
     
-# plt.savefig('images/05_12.png', dpi=300)
+# plt.savefig('figures/05_12.png', dpi=300)
 plt.show() 
 
 
@@ -691,7 +691,7 @@ def plot_projection(x, colors):
             PathEffects.Normal()])
         
 plot_projection(X_digits_tsne, y_digits)
-# plt.savefig('images/05_13.png', dpi=300)
+# plt.savefig('figures/05_13.png', dpi=300)
 plt.show()
 
 

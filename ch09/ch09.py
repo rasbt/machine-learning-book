@@ -209,7 +209,7 @@ plt.show()
 
 
 
-class LinearRegressionGD(object):
+class LinearRegressionGD:
     def __init__(self, eta=0.01, n_iter=50, random_state=1):
         self.eta = eta
         self.n_iter = n_iter

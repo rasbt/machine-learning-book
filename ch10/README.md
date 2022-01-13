@@ -1,5 +1,5 @@
 
-##  Chapter 11: Working with Unlabeled Data – Clustering Analysis
+##  Chapter 10: Working with Unlabeled Data – Clustering Analysis
 
 ### Chapter Outline
 

@@ -24,7 +24,8 @@ def get_packages(pkgs):
                     except AttributeError:
                         versions.append('0.0')
         except ImportError:
-            print(f'[FAIL]: {p} is not installed')
+            print(f'[FAIL]: {p} is not installed and/or cannot be imported.')
+            versions.append('N/A')
     return versions
 
 
@@ -33,6 +34,8 @@ def check_packages(d):
     versions = get_packages(d.keys())
 
     for (pkg_name, suggested_ver), actual_ver in zip(d.items(), versions):
+        if actual_ver == 'N/A':
+            continue
         actual_ver, suggested_ver = LooseVersion(actual_ver), LooseVersion(suggested_ver)
         if actual_ver < suggested_ver:
             print(f'[FAIL] {pkg_name} {actual_ver}, please upgrade to >= {suggested_ver}')

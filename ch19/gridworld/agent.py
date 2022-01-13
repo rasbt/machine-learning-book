@@ -17,7 +17,7 @@ from collections import defaultdict
 import numpy as np
 
 
-class Agent(object):
+class Agent:
     def __init__(
             self, env,
             learning_rate=0.01,

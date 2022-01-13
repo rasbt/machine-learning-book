@@ -89,7 +89,7 @@ check_packages(d)
 
 
 
-class Perceptron():
+class Perceptron:
     """Perceptron classifier.
 
     Parameters
@@ -304,7 +304,7 @@ plt.show()
 
 
 
-class AdalineGD():
+class AdalineGD:
     """ADAptive LInear NEuron classifier.
 
     Parameters
@@ -320,6 +320,8 @@ class AdalineGD():
 
     Attributes
     -----------
+    w_ : 1d-array
+      Weights after fitting.
     b_ : Scalar
       Bias unit after fitting.
     losses_ : list
@@ -454,7 +456,7 @@ plt.show()
 
 
 
-class AdalineSGD():
+class AdalineSGD:
     """ADAptive LInear NEuron classifier.
 
     Parameters
@@ -574,14 +576,14 @@ plt.ylabel('Petal length [standardized]')
 plt.legend(loc='upper left')
 
 plt.tight_layout()
-#plt.savefig('figures/02_15_1.png', dpi=300)
+plt.savefig('figures/02_15_1.png', dpi=300)
 plt.show()
 
 plt.plot(range(1, len(ada_sgd.losses_) + 1), ada_sgd.losses_, marker='o')
 plt.xlabel('Epochs')
 plt.ylabel('Average loss')
 
-#plt.savefig('figures/02_15_2.png', dpi=300)
+plt.savefig('figures/02_15_2.png', dpi=300)
 plt.show()
 
 
