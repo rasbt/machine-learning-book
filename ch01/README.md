@@ -43,13 +43,17 @@ Shown below is an example output:
 
 ## Jupyter Notebooks
 
-Some readers were wondering about the `.ipynb` of the code files contained in this repository -- these files are Jupyter notebooks (formerly known as IPython notebooks). 
+Some readers were wondering about the .ipynb of the code files contained in this repository -- these files are Jupyter notebooks (formerly known as IPython notebooks). 
 
-Compared to regular .py scripts, Jupyter notebooks allow us to have everything in one place: Our code, the results from executing the code, plots of our data, and documentation that supports the handy Markdown and LaTeX syntax for typing and rendering mathematical notation.
+Compared to regular .py scripts, Jupyter notebooks allow us to have everything in one place:
 
-Please see the [https://jupyter.org/install](https://jupyter.org/install) website for the latest installation instructions.
+- Our code.
+- The results from executing the code.
+- Plots of our data.
+- Documentation supporting the handy Markdown and LaTeX syntax for typing and rendering mathematical notation.
 
-There are two official applications that can open Jupyter notebooks: the original Jupyter Notebook app and the newer Jupyter Lab app. The notebooks provided in this repository are comotabible with both.
+Please see the https://jupyter.org/install website for the latest installation instructions.
 
-Finally, please note that the  Jupyter notebooks provided in this repository are optional, although, we highly recommend them. All code examples that can be found in this book are also avaiable via .py script files (which were converted from the Jupyter notebooks to ensure that they contain the identical code.)
+Two official applications can open Jupyter notebooks: the original Jupyter Notebook app and the newer Jupyter Lab app (and VS Code has Jupyter notebook support, too). The notebooks provided in this repository are compatible with both.
 
+Finally, please note that the Jupyter notebooks provided in this repository are optional, although we highly recommend them. All code examples found in this book are also available via .py script files (which were converted from the Jupyter notebooks to ensure that they contain the identical code.)
