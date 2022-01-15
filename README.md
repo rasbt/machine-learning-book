@@ -10,8 +10,9 @@
 - [Amazon Page](https://www.amazon.com/Python-Machine-Learning-scikit-learn-TensorFlow/dp/1789955750/)
 - [Packt Page](https://www.packtpub.com/data/python-machine-learning-third-edition)
 
-## Setting up Development Environment
+## Setting up Linux/Windows WSL Development Environment
 
+- it is highly recommended to use Linux like environment to do ML experiments
 - follow the instructions here: [https://github.com/rambasnet/DevEnvSetup](https://github.com/rambasnet/DevEnvSetup)
 
 ## Installing Python Packages
@@ -19,14 +20,14 @@
 Python is available for all three major operating systems — Microsoft Windows, macOS, and Linux — and the installer, as well as the documentation, can be downloaded from the official Python website: [https://www.python.org](https://www.python.org).
 
 This book is written for Python version `>= 3.7.0`, and it is recommended
-you use the most recent version of Python 3 that is currently available.
+you use the most recent version of Python 3 that is currently available. However, some packages may not yet supported the recent version of Python.
 
 **Note**
 
 You can check your current default version of Python by executing on a terminal
 
 ```bash
-    python -V
+    python --version
 ```
 
 ### Anaconda
@@ -39,7 +40,7 @@ After successfully installing Anaconda/Miniconda, we can create virtual environm
 
 ```bash
     conda update conda
-    conda create -n ml python=3.7 # create new ml environment
+    conda create -n ml python=3.9 --channel conda-forge # create new ml environment with Python 3.9 version from conda-forge channel
     conda env list # list all the avialable virtual environments
     conda activate ml #activate ml environment
     conda install <SomePackage> #install packages
@@ -66,9 +67,11 @@ The version numbers of the major Python packages that were used for writing this
 - [scikit-learn](http://scikit-learn.org/stable/) >= 0.22.0
 - [matplotlib](http://matplotlib.org) >= 3.1.0
 - [pandas](http://pandas.pydata.org) >= 0.25.3
+- use *python_environment_check.py* script to check for packages with right version
 
 ```bash
     conda activate ml
+    python python_environment_check.py
     conda install numpy
     conda install scipy
     conda install scikit-learn
