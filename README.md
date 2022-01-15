@@ -1,70 +1,112 @@
-# *Machine Learning with PyTorch and Scikit-Learn* Book
+# Python Machine Learning (3rd Ed.) Notebooks
 
-##  Code Repository
+[![Python 3.7](https://img.shields.io/badge/Python-3.7-blue.svg)](#)
+[![License](https://img.shields.io/badge/Code%20License-MIT-blue.svg)](LICENSE.txt)
 
-
-
-To be published January 2022
-
-Paperback: TBD pages  
-Publisher: Packt Publishing  
-Language: English
-
-ISBN-10: 1801819319   
-ISBN-13: 978-1801819312  
-Kindle ASIN: B09NW48MR1  
-
-[<img src="./.other/cover_1.jpg" width="248">]()
-
-
+- By: Sebastian Raschka & Vahid Mirjalili, 2019
 
 ## Links
 
-- [Amazon link](https://www.amazon.com/Machine-Learning-PyTorch-Scikit-Learn-scikit-learn-ebook-dp-B09NW48MR1/dp/B09NW48MR1/) 
-- [Packt link](https://www.packtpub.com/product/machine-learning-with-pytorch-and-scikit-learn/9781801819312)
+- [Amazon Page](https://www.amazon.com/Python-Machine-Learning-scikit-learn-TensorFlow/dp/1789955750/)
+- [Packt Page](https://www.packtpub.com/data/python-machine-learning-third-edition)
+
+## Setting up Development Environment
+
+- follow the instructions here: [https://github.com/rambasnet/DevEnvSetup](https://github.com/rambasnet/DevEnvSetup)
+
+## Installing Python Packages
+
+Python is available for all three major operating systems — Microsoft Windows, macOS, and Linux — and the installer, as well as the documentation, can be downloaded from the official Python website: [https://www.python.org](https://www.python.org).
+
+This book is written for Python version `>= 3.7.0`, and it is recommended
+you use the most recent version of Python 3 that is currently available.
+
+**Note**
+
+You can check your current default version of Python by executing on a terminal
+
+```bash
+    python -V
+```
+
+### Anaconda
+
+A highly recommended alternative Python distribution for scientific computing
+is Anaconda or Miniconda by Continuum Analytics. Anaconda is a free—including commercial use—enterprise-ready Python distribution that bundles all the essential Python packages for data science, math, and engineering in one user-friendly cross-platform distribution. The Anaconda installer can be downloaded at [https://docs.anaconda.com/anaconda/install/](https://docs.anaconda.com/anaconda/install/), and an Anaconda quick start-guide is available at [https://docs.anaconda.com/anaconda/user-guide/getting-started/](https://docs.anaconda.com/anaconda/user-guide/getting-started/).
+
+After successfully installing Anaconda/Miniconda, we can create virtual environment with a particular version of Python and install new Python packages in that environment using the following commands:
 
 
+```bash
+    conda update conda
+    conda create -n ml python=3.7 # create new ml environment
+    conda env list # list all the avialable virtual environments
+    conda activate ml #activate ml environment
+    conda install <SomePackage> #install packages
+    conda deactivate # exit out the current environment
+```
 
-## Table of Contents and Code Notebooks
+Existing packages can be updated using the following command:
+#### NOTE: Must always activate ml virtual enviornment to install and run ML-related libraries
 
-**Helpful installation and setup instructions can be found in the [README.md file of Chapter 1](ch01/README.md)**
+```bash
+    conda activate ml
+    conda update <SomePackage>
+    conda deactivate
+```
 
-**Please note that these are just the code examples accompanying the book, which we uploaded for your convenience; be aware that these notebooks may not be useful without the formulae and descriptive text.**   
+Throughout this book, we will mainly use NumPy's multi-dimensional arrays to store and manipulate data. Occasionally, we will make use of pandas, which is a library built on top of NumPy that provides additional higher level data manipulation tools that make working with tabular data even more convenient. To augment our learning experience and visualize quantitative data, which is often extremely useful to intuitively make sense of it, we will use the very customizable matplotlib library.
 
+### Core Packages
 
-1. Machine Learning - Giving Computers the Ability to Learn from Data [[open dir](ch01)] 
-2. Training Machine Learning Algorithms for Classification [[open dir](ch02)] 
-3. A Tour of Machine Learning Classifiers Using Scikit-Learn [[open dir](ch03)] 
-4. Building Good Training Sets – Data Pre-Processing [[open dir](ch04)] 
-5. Compressing Data via Dimensionality Reduction [[open dir](ch05)] 
-6. Learning Best Practices for Model Evaluation and Hyperparameter Optimization [[open dir](ch06)]
-7. Combining Different Models for Ensemble Learning [[open dir](ch07)] 
-8. Applying Machine Learning to Sentiment Analysis  [[open dir](ch08)]  
-9. Predicting Continuous Target Variables with Regression Analysis [[open dir](ch9)] 
-10. Working with Unlabeled Data – Clustering Analysis [[open dir](ch10)] 
-11. Implementing a Multi-layer Artificial Neural Network from Scratch [[open dir](ch11)] 
-12. Parallelizing Neural Network Training with PyTorch [[open dir](ch12)] 
-13. Going Deeper -- The Mechanics of PyTorch [[open dir](ch13)] 
-14. Classifying Images with Deep Convolutional Neural Networks [[open dir](ch14)]  
-15. Modeling Sequential Data Using Recurrent Neural Networks [[open dir](ch15)]  
-16. Transformers -- Improving Natural Language Processing with Attention Mechanisms [[open dir](ch16)]  
-17. Generative Adversarial Networks for Synthesizing New Data [[open dir](ch17)]   
-18. Graph Neural Networks for Capturing Dependencies in Graph Structured Data [[open dir](ch18)]  
-19. Reinforcement Learning for Decision Making in Complex Environments [[open dir](ch19)] 
+The version numbers of the major Python packages that were used for writing this book are listed below. Please make sure that the version numbers of your installed packages are equal to, or greater than, those version numbers to ensure the code examples run correctly:
 
+- [NumPy](http://www.numpy.org) >= 1.17.4
+- [SciPy](http://www.scipy.org) >= 1.3.1
+- [scikit-learn](http://scikit-learn.org/stable/) >= 0.22.0
+- [matplotlib](http://matplotlib.org) >= 3.1.0
+- [pandas](http://pandas.pydata.org) >= 0.25.3
 
----
+```bash
+    conda activate ml
+    conda install numpy
+    conda install scipy
+    conda install scikit-learn
+    conda install matplotlib
+    conda install pandas
+```
 
-<br>
-<br>
+### Jupyter Notebook
 
-Sebastian Raschka, Yuxi (Hayden) Liu, and Vahid Mirjalili. *Machine Learning with PyTorch and Scikit-Learn*. Packt Publishing, 2022.
+If you're wondering about the `.ipynb` of the code files -- these files are IPython notebooks. I chose IPython notebooks over plain Python `.py` scripts, because I think that they are just great for data analysis projects! IPython notebooks allow us to have everything in one place: Our code, the results from executing the code, plots of our data, and documentation that supports the handy Markdown and powerful LaTeX syntax!
 
-    @book{mlbook2022,  
-    address = {Birmingham, UK},  
-    author = {Sebastian Raschka, and Yuxi (Hayden) Liu, and Vahid Mirjalili},  
-    isbn = {978-1801819312},   
-    publisher = {Packt Publishing},  
-    title = {{Machine Learning with PyTorch and Scikit-Learn}},  
-    year = {2022}  
-    }
+![Jupyter Example](./images/ipynb_ex1.png)
+
+**Side Note:**  "IPython Notebook" recently became the "[Jupyter Notebook](<http://jupyter.org>)"; Jupyter is an umbrella project that aims to support other languages in addition to Python including Julia, R, and many more. Don't worry, though, for a Python user, there's only a difference in terminology (we say "Jupyter Notebook" now instead of "IPython Notebook").
+
+We can use the Conda installer if we have Anaconda or Miniconda installed:
+
+```bash
+    conda activate ml
+    conda install jupyter notebook
+    conda install -c conda-forge retrolab
+```
+
+To open a Jupyter notebook, we `cd` to the directory that contains your notebooks, e.g,.
+
+```bash
+    cd ~/PythonMachineLearning-Notebooks
+```
+
+and launch `jupyter notebook` by executing
+
+```bash
+    conda activate ml
+    jupyter retro
+```
+
+Jupyter will start in our default browser (typically running at [http://localhost:8888/](http://localhost:8888/)). Now, we can simply select the notebook you wish to open from the Jupyter menu.
+
+![Jupyter File Explorer](./images/ipynb_ex2.png)
+
+For more information about the Jupyter notebook, I recommend the [Jupyter Beginner Guide](http://jupyter-notebook-beginner-guide.readthedocs.org/en/latest/what_is_jupyter.html) and [Jupyter Notebook Basics](https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Notebook%20Basics.html).
