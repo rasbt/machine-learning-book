@@ -10,9 +10,8 @@
 - [Amazon Page](https://www.amazon.com/Python-Machine-Learning-scikit-learn-TensorFlow/dp/1789955750/)
 - [Packt Page](https://www.packtpub.com/data/python-machine-learning-third-edition)
 
-## Setting up Linux/Windows WSL Development Environment
+## Setting up Development Environment
 
-- it is highly recommended to use Linux like environment to do ML experiments
 - follow the instructions here: [https://github.com/rambasnet/DevEnvSetup](https://github.com/rambasnet/DevEnvSetup)
 
 ## Installing Python Packages
@@ -20,14 +19,14 @@
 Python is available for all three major operating systems — Microsoft Windows, macOS, and Linux — and the installer, as well as the documentation, can be downloaded from the official Python website: [https://www.python.org](https://www.python.org).
 
 This book is written for Python version `>= 3.7.0`, and it is recommended
-you use the most recent version of Python 3 that is currently available. However, some packages may not yet supported the recent version of Python.
+you use the most recent version of Python 3 that is currently available.
 
 **Note**
 
 You can check your current default version of Python by executing on a terminal
 
 ```bash
-    python --version
+    python -V
 ```
 
 ### Anaconda
@@ -40,7 +39,24 @@ After successfully installing Anaconda/Miniconda, we can create virtual environm
 
 ```bash
     conda update conda
-    conda create -n ml python=3.9 --channel conda-forge # create new ml environment with Python 3.9 version from conda-forge channel
+    conda env list # list current environments
+    conda env remove -n <environment_name> # remove existing environment
+```
+
+## Use yaml file to create env and install packages
+- ml.yml file is provided with the repository
+- this automates the createtion of new environemnt and installation of dependent packages
+- if needed, change prefix to the right path where you want the environment and packages to install
+- the provided file expects you've **miniconda** in your home folder, e.g., /Users/rbasnet/miniconda
+
+```bash
+    conda env create -f ml.yml
+```
+
+## Manually create env and install packages
+
+```bash
+    conda env create -n ml python=3.7 # create new ml environment
     conda env list # list all the avialable virtual environments
     conda activate ml #activate ml environment
     conda install <SomePackage> #install packages
@@ -58,7 +74,7 @@ Existing packages can be updated using the following command:
 
 Throughout this book, we will mainly use NumPy's multi-dimensional arrays to store and manipulate data. Occasionally, we will make use of pandas, which is a library built on top of NumPy that provides additional higher level data manipulation tools that make working with tabular data even more convenient. To augment our learning experience and visualize quantitative data, which is often extremely useful to intuitively make sense of it, we will use the very customizable matplotlib library.
 
-### Core Packages
+### Manually Install Core Packages
 
 The version numbers of the major Python packages that were used for writing this book are listed below. Please make sure that the version numbers of your installed packages are equal to, or greater than, those version numbers to ensure the code examples run correctly:
 
@@ -67,11 +83,10 @@ The version numbers of the major Python packages that were used for writing this
 - [scikit-learn](http://scikit-learn.org/stable/) >= 0.22.0
 - [matplotlib](http://matplotlib.org) >= 3.1.0
 - [pandas](http://pandas.pydata.org) >= 0.25.3
-- use *python_environment_check.py* script to check for packages with right version
+- you can use python_environment_check.py file to check if correct version of required packages are installed
 
 ```bash
     conda activate ml
-    python python_environment_check.py
     conda install numpy
     conda install scipy
     conda install scikit-learn
@@ -95,16 +110,27 @@ We can use the Conda installer if we have Anaconda or Miniconda installed:
     conda install -c conda-forge retrolab
 ```
 
-To open a Jupyter notebook, we `cd` to the directory that contains your notebooks, e.g,.
+### Cloning and Using this Repository
+- using terminal clone this repository
+- you must be in basnet branch to see my notebooks and code for the class which are mainly based on main branch
 
 ```bash
-    cd ~/PythonMachineLearning-Notebooks
+    git clone https://github.com/rambasnet/python-machine-learning.git
+    git branch --show # show the current branch; if not basnet, checkout basnet
+    git checkout basnet 
+```
+
+- to open a Jupyter notebook, we `cd` to the directory that contains your notebooks, e.g,.
+
+```bash
+    cd ~/Python-Machine-Learning
 ```
 
 and launch `jupyter notebook` by executing
 
 ```bash
     conda activate ml
+    git checkout basnet
     jupyter retro
 ```
 
