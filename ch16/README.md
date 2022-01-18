@@ -1,4 +1,4 @@
-##  Chapter 16: Transformers – Improving Natural Language Processing with Attention Mechanisms (Part 1/3)
+##  Chapter 16: Transformers – Improving Natural Language Processing with Attention Mechanisms
 
 ### Chapter Outline
 
