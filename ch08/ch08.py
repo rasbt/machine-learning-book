@@ -198,7 +198,7 @@ df.shape
 # ### Note
 # 
 # If you have problems with creating the `movie_data.csv`, you can find a download a zip archive at 
-# https://github.com/rasbt/python-machine-learning-book-pytorch-edition/tree/master/code/ch08/
+# https://github.com/rasbt/machine-learning-book/tree/main/ch08/
 # 
 # ---
 
@@ -559,8 +559,8 @@ if not os.path.isfile('movie_data.csv'):
               'in this directory. You can obtain it by'
               'a) executing the code in the beginning of this'
               'notebook or b) by downloading it from GitHub:'
-              'https://github.com/rasbt/python-machine-learning-'
-              'book-2nd-edition/blob/master/code/ch08/movie_data.csv.gz')
+              'https://github.com/rasbt/machine-learning-book/'
+              'blob/main/ch08/movie_data.csv.gz')
     else:
         with gzip.open('movie_data.csv.gz', 'rb') as in_f,                 open('movie_data.csv', 'wb') as out_f:
             out_f.write(in_f.read())
