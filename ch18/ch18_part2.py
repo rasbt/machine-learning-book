@@ -230,8 +230,3 @@ plt.xlabel('Isotropic polarizability')
 
 
 
-
-
-
-
-

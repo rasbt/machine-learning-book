@@ -283,7 +283,7 @@ plt.plot(sigma_z, c0, linestyle='--', label='L(w, b) if y=0')
 
 plt.ylim(0.0, 5.1)
 plt.xlim([0, 1])
-plt.xlabel('$\sigma$(z)')
+plt.xlabel('$\sigma(z)$')
 plt.ylabel('L(w, b)')
 plt.legend(loc='best')
 plt.tight_layout()

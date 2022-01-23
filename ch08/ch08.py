@@ -700,7 +700,7 @@ lda.components_.shape
 
 
 n_top_words = 5
-feature_names = count.get_feature_names()
+feature_names = count.get_feature_names_out()
 
 for topic_idx, topic in enumerate(lda.components_):
     print(f'Topic {(topic_idx + 1)}:')

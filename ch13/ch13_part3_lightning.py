@@ -68,7 +68,7 @@ check_packages(d)
 
 
 class MultiLayerPerceptron(pl.LightningModule):
-    def __init__(self,image_shape=(1, 28, 28), hidden_units=(32, 16)):
+    def __init__(self, image_shape=(1, 28, 28), hidden_units=(32, 16)):
         super().__init__()
         
         # new PL attributes:
