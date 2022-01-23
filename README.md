@@ -56,7 +56,7 @@ After successfully installing Anaconda/Miniconda, we can create virtual environm
 ## Manually create env and install packages
 
 ```bash
-    conda env create -n ml python=3.7 # create new ml environment
+    conda create -n ml python=3.7 # create new ml environment
     conda env list # list all the avialable virtual environments
     conda activate ml #activate ml environment
     conda install <SomePackage> #install packages
