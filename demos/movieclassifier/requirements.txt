@@ -1,0 +1,17 @@
+certifi==2020.12.5
+click==7.1.2
+cycler==0.10.0
+Flask==1.1.2
+gunicorn==20.1.0
+itsdangerous==1.1.0
+Jinja2==2.11.3
+joblib==1.0.
+MarkupSafe==1.1.1
+numpy==1.20.2
+olefile==0.46
+pandas==1.2.4
+scikit-learn==0.24.1
+scipy==1.6.2
+threadpoolctl==2.1.0
+Werkzeug==1.0.1
+WTForms==2.3.3

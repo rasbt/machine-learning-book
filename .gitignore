@@ -3,6 +3,7 @@ ch12/MNIST
 ch12/celeba
 ch12/iris_classifier_state.pt
 ch12/iris_classifier.pt
+data/
 
 # Test Suites
 .coverage*
