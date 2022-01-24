@@ -179,7 +179,7 @@ seq_dl = DataLoader(seq_dataset, batch_size=batch_size, shuffle=True, drop_last=
 
 class RNN(nn.Module):
     def __init__(self, vocab_size, embed_dim, rnn_hidden_size):
-        super(RNN, self).__init__()
+        super().__init__()
         self.embedding = nn.Embedding(vocab_size, embed_dim) 
         self.rnn_hidden_size = rnn_hidden_size
         self.rnn = nn.LSTM(embed_dim, rnn_hidden_size, 
@@ -361,11 +361,6 @@ print(sample(model, starting_str='The island',
 # 
 # Readers may ignore the next cell.
 # 
-
-
-
-
-
 
 
 

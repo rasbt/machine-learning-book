@@ -443,7 +443,7 @@ plt.legend(fontsize=20)
 ax.set_xlabel('Iteration', size=15)
 ax.set_ylabel('Discriminator output', size=15)
 
-#plt.savefig('images/ch17-gan-learning-curve.pdf')
+#plt.savefig('figures/ch17-gan-learning-curve.pdf')
 plt.show()
 
 
@@ -467,7 +467,7 @@ for i,e in enumerate(selected_epochs):
         image = epoch_samples[e-1][j]
         ax.imshow(image, cmap='gray_r')
     
-#plt.savefig('images/ch17-vanila-gan-samples.pdf')
+#plt.savefig('figures/ch17-vanila-gan-samples.pdf')
 plt.show()
 
 
@@ -542,6 +542,11 @@ compute_score(torch.from_numpy(epoch_samples[-1]), real_image)
 # 
 # Readers may ignore the next cell.
 # 
+
+
+
+
+
 
 
 

@@ -1,6 +1,8 @@
 # coding: utf-8
 
 
+import sys
+from python_environment_check import check_packages
 import torch 
 import torch.nn as nn 
 from torch.utils.data import DataLoader 
@@ -10,6 +12,37 @@ from ignite.engine import Events, create_supervised_trainer, create_supervised_e
 from ignite.metrics import Accuracy, Loss
 from ignite.handlers import Checkpoint, DiskSaver
 from ignite.contrib.handlers import TensorboardLogger, global_step_from_engine
+
+
+
+
+
+
+# # Machine Learning with PyTorch and Scikit-Learn  
+# # -- Code Examples
+
+# ## Package version checks
+
+# Add folder to path in order to load from the check_packages.py script:
+
+
+
+sys.path.insert(0, '..')
+
+
+# Check recommended package versions:
+
+
+
+
+
+d = {
+    'numpy': '1.21.2',
+    'matplotlib': '3.4.3',
+    'sklearn': '1.0',
+}
+check_packages(d)
+
 
 # # Chapter 13: Going Deeper -- the Mechanics of PyTorch
 

@@ -1,6 +1,8 @@
 # coding: utf-8
 
 
+import sys
+from python_environment_check import check_packages
 #from google.colab import drive
 import torch
 import torch.nn as nn
@@ -11,11 +13,33 @@ from torchvision import transforms
 from torch.utils.data import DataLoader
 from torch.autograd import grad as torch_grad
 
-# *Python Machine Learning, PyTorch Edition* by [Sebastian Raschka](https://sebastianraschka.com), [Yuxi (Hayden) Liu](https://www.mlexample.com/) & [Vahid Mirjalili](http://vahidmirjalili.com), Packt Publishing Ltd. 2021
-# 
-# Code Repository: 
-# 
-# Code License: [MIT License]()
+# # Machine Learning with PyTorch and Scikit-Learn  
+# # -- Code Examples
+
+# ## Package version checks
+
+# Add folder to path in order to load from the check_packages.py script:
+
+
+
+sys.path.insert(0, '..')
+
+
+# Check recommended package versions:
+
+
+
+
+
+d = {
+    'torch': '1.8.0',
+    'torchvision': '0.9.0',
+    'numpy': '1.21.2',
+    'matplotlib': '3.4.3',
+}
+
+check_packages(d)
+
 
 # # Chapter 17 - Generative Adversarial Networks for Synthesizing New Data (Part 2/2)
 
@@ -80,6 +104,8 @@ from torch.autograd import grad as torch_grad
 
 
 
+
+
 print(torch.__version__)
 print("GPU Available:", torch.cuda.is_available())
 
@@ -93,7 +119,10 @@ else:
 
 
 
+
 # ## Train the DCGAN model
+
+
 
 
 
@@ -140,7 +169,7 @@ def make_generator_network(input_size, n_filters):
 
 class Discriminator(nn.Module):
     def __init__(self, n_filters):
-        super(Discriminator, self).__init__()
+        super().__init__()
         self.network = nn.Sequential(
             nn.Conv2d(1, n_filters, 4, 2, 1, bias=False),
             nn.LeakyReLU(0.2),
@@ -292,7 +321,7 @@ for i,e in enumerate(selected_epochs):
         image = epoch_samples[e-1][j]
         ax.imshow(image, cmap='gray_r')
     
-# plt.savefig('images/ch17-dcgan-samples.pdf')
+# plt.savefig('figures/ch17-dcgan-samples.pdf')
 plt.show()
 
 
@@ -335,7 +364,7 @@ def make_generator_network_wgan(input_size, n_filters):
 
 class DiscriminatorWGAN(nn.Module):
     def __init__(self, n_filters):
-        super(DiscriminatorWGAN, self).__init__()
+        super().__init__()
         self.network = nn.Sequential(
             nn.Conv2d(1, n_filters, 4, 2, 1, bias=False),
             nn.LeakyReLU(0.2),
@@ -363,6 +392,7 @@ disc_model = DiscriminatorWGAN(n_filters).to(device)
 
 g_optimizer = torch.optim.Adam(gen_model.parameters(), 0.0002)
 d_optimizer = torch.optim.Adam(disc_model.parameters(), 0.0002)
+
 
 
 
@@ -474,7 +504,7 @@ for i,e in enumerate(selected_epochs):
         image = epoch_samples_wgan[e-1][j]
         ax.imshow(image, cmap='gray_r')
     
-# plt.savefig('images/ch17-wgan-gp-samples.pdf')
+# plt.savefig('figures/ch17-wgan-gp-samples.pdf')
 plt.show()
 
 
@@ -492,11 +522,6 @@ plt.show()
 # Readers may ignore the next cell.
 # 
 # 
-
-
-
-
-
 
 
 
