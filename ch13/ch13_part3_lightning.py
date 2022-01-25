@@ -35,7 +35,7 @@ d = {
     'torch': '1.8',
     'torchvision': '0.9.0',
     'tensorboard': '2.7.0',
-    'pytorch_lightning': '1.5.2',
+    'pytorch_lightning': '1.5.0',
     'torchmetrics': '0.6.2'
 }
 check_packages(d)
@@ -86,7 +86,6 @@ class MultiLayerPerceptron(pl.LightningModule):
             input_size = hidden_unit 
  
         all_layers.append(nn.Linear(hidden_units[-1], 10)) 
-        all_layers.append(nn.Softmax(dim=1)) 
         self.model = nn.Sequential(*all_layers)
 
     def forward(self, x):
@@ -96,7 +95,7 @@ class MultiLayerPerceptron(pl.LightningModule):
     def training_step(self, batch, batch_idx):
         x, y = batch
         logits = self(x)
-        loss = nn.functional.cross_entropy(self(x), y)
+        loss = nn.functional.cross_entropy(logits, y)
         preds = torch.argmax(logits, dim=1)
         self.train_acc.update(preds, y)
         self.log("train_loss", loss, prog_bar=True)
@@ -109,7 +108,7 @@ class MultiLayerPerceptron(pl.LightningModule):
     def validation_step(self, batch, batch_idx):
         x, y = batch
         logits = self(x)
-        loss = nn.functional.cross_entropy(self(x), y)
+        loss = nn.functional.cross_entropy(logits, y)
         preds = torch.argmax(logits, dim=1)
         self.valid_acc.update(preds, y)
         self.log("valid_loss", loss, prog_bar=True)
@@ -122,7 +121,7 @@ class MultiLayerPerceptron(pl.LightningModule):
     def test_step(self, batch, batch_idx):
         x, y = batch
         logits = self(x)
-        loss = nn.functional.cross_entropy(self(x), y)
+        loss = nn.functional.cross_entropy(logits, y)
         preds = torch.argmax(logits, dim=1)
         self.test_acc.update(preds, y)
         self.log("test_loss", loss, prog_bar=True)
@@ -223,7 +222,7 @@ trainer.test(model=mnistclassifier, datamodule=mnist_dm, ckpt_path='best')
 
 
 
-path = 'lightning_logs/version_0/checkpoints/epoch=9-step=8599.ckpt'
+path = 'lightning_logs/version_0/checkpoints/epoch=8-step=7739.ckpt'
 
 if torch.cuda.is_available(): # if you have GPUs
     trainer = pl.Trainer(
@@ -257,7 +256,7 @@ trainer.test(model=mnistclassifier, datamodule=mnist_dm, ckpt_path='best')
 
 
 
-path = "lightning_logs/version_0/checkpoints/epoch=23-step=20639.ckpt"
+path = "lightning_logs/version_0/checkpoints/epoch=17-step=15479.ckpt"
 model = MultiLayerPerceptron.load_from_checkpoint(path)
 
 
