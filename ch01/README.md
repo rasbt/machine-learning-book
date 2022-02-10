@@ -15,6 +15,53 @@ This chapter does not contain any code examples, but we recommend you to set up 
 For more detailed setup instructions, please refer to the section ***Installing Python and packages from the Python Package Index*** in Chapter 1.
 
 
+
+**Conda**
+
+If you are using conda (we recommend installing conda via [Miniforge](https://github.com/conda-forge/miniforge)), you can create a new environment as follows:
+
+```bash
+conda create -n "pyml" python=3.9 numpy=1.21.2 scipy=1.7.0 scikit-learn=1.0 matplotlib=3.4.3 pandas=1.3.2
+```
+
+After creating this environment, you can activate it via
+
+```bash
+conda activate "pyml"
+```
+
+
+
+**Pip and virtualenv**
+
+If you prefer using `pip`, you can go ahead and install the required packages via
+
+```bash
+pip install numpy==1.21.2 scipy==1.7.0 scikit-learn==1.0 matplotlib==3.4.3 pandas==1.3.2
+```
+
+However, we additionally recommend creating a new virtual environment for this book. 
+You can create a new virtual environment with a specific Python version using [virtualenv](https://virtualenv.pypa.io/en/latest/) as follows:
+
+```bash
+pip install virtualenv
+cd /path/to/where/you/want/your/environment
+virtualenv pyml
+source pyml/bin/activate 
+```
+
+After activating your environment, you can install the required packages via
+
+```bash
+pip install numpy==1.21.2 scipy==1.7.0 scikit-learn==1.0 matplotlib==3.4.3 pandas==1.3.2
+```
+
+
+
+
+
+
+
 ## Checking Your Python Environment
 
 To verify that your Python environment is set up for the following chapters, we recommend running the [`../python_environment_check.py`](../python_environment_check.py) script provided in the main folder of this repository.
@@ -22,10 +69,6 @@ To verify that your Python environment is set up for the following chapters, we 
 You can run the `python_environment_check.py` script via
 
     python python_environment_check.py
-
-or
-
-    python3 python_environment_check.py
 
 Shown below is an example output:
 
