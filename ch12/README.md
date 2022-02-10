@@ -36,5 +36,12 @@
 
 
 
+
+**Installing PyTorch**
+
+We recommend consulting the official [pytorch.org](https://pytorch.org) installer menu to select the conda or pip command to install PyTorch for your operating system. 
+
+
+
 **Please refer to the [README.md](../ch01/README.md) file in [`../ch01`](../ch01) for more information about running the code examples.**
 
