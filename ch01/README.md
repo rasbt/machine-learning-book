@@ -99,4 +99,17 @@ Please see the https://jupyter.org/install website for the latest installation i
 
 Two official applications can open Jupyter notebooks: the original Jupyter Notebook app and the newer Jupyter Lab app (and VS Code has Jupyter notebook support, too). The notebooks provided in this repository are compatible with both.
 
+We recommend installing Jupyter Lab via
+Jupyter Lab can be installed via 
+
+```bash
+conda install -c conda-forge jupyterlab
+```
+
+or 
+
+```bash
+pip install jupyterlab
+```
+
 Finally, please note that the Jupyter notebooks provided in this repository are optional, although we highly recommend them. All code examples found in this book are also available via .py script files (which were converted from the Jupyter notebooks to ensure that they contain the identical code.)
