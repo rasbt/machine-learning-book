@@ -298,7 +298,7 @@ transform = transforms.Compose([transforms.ToTensor()])
 mnist_dataset = torchvision.datasets.MNIST(root=image_path, 
                                            train=True, 
                                            transform=transform, 
-                                           download=False)
+                                           download=True)
 
 mnist_valid_dataset = Subset(mnist_dataset, torch.arange(10000)) 
 mnist_train_dataset = Subset(mnist_dataset, torch.arange(10000, len(mnist_dataset)))
@@ -306,6 +306,8 @@ mnist_test_dataset = torchvision.datasets.MNIST(root=image_path,
                                            train=False, 
                                            transform=transform, 
                                            download=False)
+
+
 
 
 
@@ -367,8 +369,6 @@ model.add_module('relu3', nn.ReLU())
 model.add_module('dropout', nn.Dropout(p=0.5)) 
 
 model.add_module('fc2', nn.Linear(1024, 10)) 
-model.add_module('softmax', nn.Softmax(dim=1)) 
- 
 
 
 
@@ -430,6 +430,8 @@ hist = train(model, num_epochs, train_dl, valid_dl)
 
 
 
+
+
 x_arr = np.arange(len(hist[0])) + 1
 
 fig = plt.figure(figsize=(12, 4))
@@ -446,6 +448,7 @@ ax.legend(fontsize=15)
 ax.set_xlabel('Epoch', size=15)
 ax.set_ylabel('Accuracy', size=15)
 
+#plt.savefig('figures/14_13.png')
 plt.show()
 
 
@@ -456,7 +459,6 @@ model_cpu = model.cpu()
 pred = model(mnist_test_dataset.data.unsqueeze(1) / 255.)
 is_correct = (torch.argmax(pred, dim=1) == mnist_test_dataset.targets).float()
 print(f'Test accuracy: {is_correct.mean():.4f}') 
- 
 
 
 
@@ -475,6 +477,8 @@ for i in range(12):
             verticalalignment='center', 
             transform=ax.transAxes)
     
+    
+plt.savefig('figures/14_14.png')
 plt.show()
 
 
