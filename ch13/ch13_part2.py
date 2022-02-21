@@ -222,7 +222,7 @@ transform = transforms.Compose([transforms.ToTensor()])
 mnist_train_dataset = torchvision.datasets.MNIST(root=image_path, 
                                            train=True, 
                                            transform=transform, 
-                                           download=False)
+                                           download=True)
 mnist_test_dataset = torchvision.datasets.MNIST(root=image_path, 
                                            train=False, 
                                            transform=transform, 
@@ -247,7 +247,6 @@ for hidden_unit in hidden_units:
     input_size = hidden_unit
 
 all_layers.append(nn.Linear(hidden_units[-1], 10))
-all_layers.append(nn.Softmax(dim=1))
 model = nn.Sequential(*all_layers)
 
 model
@@ -285,11 +284,6 @@ print(f'Test accuracy: {is_correct.mean():.4f}')
 # ---
 # 
 # Readers may ignore the next cell.
-
-
-
-
-
 
 
 

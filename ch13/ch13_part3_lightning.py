@@ -217,7 +217,13 @@ trainer.test(model=mnistclassifier, datamodule=mnist_dm, ckpt_path='best')
 
 
 
+
+
 # Start tensorboard
+
+
+
+
 
 
 
@@ -226,11 +232,11 @@ path = 'lightning_logs/version_0/checkpoints/epoch=8-step=7739.ckpt'
 
 if torch.cuda.is_available(): # if you have GPUs
     trainer = pl.Trainer(
-        max_epochs=30, callbacks=callbacks, resume_from_checkpoint=path, gpus=1
+        max_epochs=15, callbacks=callbacks, resume_from_checkpoint=path, gpus=1
     )
 else:
     trainer = pl.Trainer(
-        max_epochs=30, callbacks=callbacks, resume_from_checkpoint=path
+        max_epochs=15, callbacks=callbacks, resume_from_checkpoint=path
     )
 
 trainer.fit(model=mnistclassifier, datamodule=mnist_dm)
@@ -256,7 +262,7 @@ trainer.test(model=mnistclassifier, datamodule=mnist_dm, ckpt_path='best')
 
 
 
-path = "lightning_logs/version_0/checkpoints/epoch=17-step=15479.ckpt"
+path = "lightning_logs/version_0/checkpoints/epoch=13-step=12039.ckpt"
 model = MultiLayerPerceptron.load_from_checkpoint(path)
 
 
