@@ -22,7 +22,7 @@ Kindle ASIN: B09NW48MR1
 
 - [Amazon link](https://www.amazon.com/Machine-Learning-PyTorch-Scikit-Learn-scikit-learn-ebook-dp-B09NW48MR1/dp/B09NW48MR1/) 
 - [Packt link](https://www.packtpub.com/product/machine-learning-with-pytorch-and-scikit-learn/9781801819312)
-
+- [Blog post summarizing the contents](https://sebastianraschka.com/blog/2022/ml-pytorch-book.html)
 
 
 ## Table of Contents and Code Notebooks
