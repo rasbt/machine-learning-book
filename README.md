@@ -37,7 +37,7 @@ Kindle ASIN: B09NW48MR1
 6. Learning Best Practices for Model Evaluation and Hyperparameter Optimization [[open dir](ch06)]
 7. Combining Different Models for Ensemble Learning [[open dir](ch07)] 
 8. Applying Machine Learning to Sentiment Analysis  [[open dir](ch08)]  
-9. Predicting Continuous Target Variables with Regression Analysis [[open dir](ch9)] 
+9. Predicting Continuous Target Variables with Regression Analysis [[open dir](ch09)] 
 10. Working with Unlabeled Data – Clustering Analysis [[open dir](ch10)] 
 11. Implementing a Multi-layer Artificial Neural Network from Scratch [[open dir](ch11)] 
 12. Parallelizing Neural Network Training with PyTorch [[open dir](ch12)] 
