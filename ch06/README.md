@@ -14,6 +14,8 @@
   - Addressing over- and underfitting with validation curves
 - Fine-tuning machine learning models via grid search
   - Tuning hyperparameters via grid search
+  - Exploring hyperparameter configurations more widely with randomized search
+  - More resource-efficient hyperparameter search with successive halving
   - Algorithm selection with nested cross-validation
 - Looking at different performance evaluation metrics
   - Reading a confusion matrix

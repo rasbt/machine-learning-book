@@ -18,6 +18,9 @@ from sklearn.model_selection import learning_curve
 from sklearn.model_selection import validation_curve
 from sklearn.model_selection import GridSearchCV
 from sklearn.svm import SVC
+from sklearn.model_selection import RandomizedSearchCV
+from sklearn.experimental import enable_halving_search_cv
+from sklearn.model_selection import HalvingRandomSearchCV
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import precision_score, recall_score, f1_score
@@ -70,6 +73,9 @@ check_packages(d)
 #   - [Addressing overfitting and underfitting with validation curves](#Addressing-overfitting-and-underfitting-with-validation-curves)
 # - [Fine-tuning machine learning models via grid search](#Fine-tuning-machine-learning-models-via-grid-search)
 #   - [Tuning hyperparameters via grid search](#Tuning-hyperparameters-via-grid-search)
+#   - [Exploring hyperparameter configurations more widely with randomized search](#Exploring-hyperparameter-configurations-more-widely-with-randomized-search)
+#   - [More resource-efficient hyperparameter search with successive
+# halving](#More-resource-efficient-hyperparameter-search-with-successive-halving)
 #   - [Algorithm selection with nested cross-validation](#Algorithm-selection-with-nested-cross-validation)
 # - [Looking at different performance evaluation metrics](#Looking-at-different-performance-evaluation-metrics)
 #   - [Reading a confusion matrix](#Reading-a-confusion-matrix)
@@ -355,6 +361,90 @@ clf = gs.best_estimator_
 # because this is done automatically via refit=True.
 
 print(f'Test accuracy: {clf.score(X_test, y_test):.3f}')
+
+
+
+
+
+
+pipe_svc = make_pipeline(
+    StandardScaler(),
+    SVC(random_state=1))
+
+param_grid = [{'svc__C': param_range,
+               'svc__kernel': ['linear']},
+              {'svc__C': param_range,
+               'svc__gamma': param_range,
+               'svc__kernel': ['rbg']}]
+
+
+rs = RandomizedSearchCV(estimator=pipe_svc,
+                        param_distributions=param_grid,
+                        scoring='accuracy',
+                        refit=True,
+                        n_iter=20,
+                        cv=10,
+                        random_state=1,
+                        n_jobs=-1)
+
+
+
+
+rs = rs.fit(X_train, y_train)
+print(rs.best_score_)
+
+
+
+
+print(rs.best_params_)
+
+
+# ## Exploring hyperparameter configurations more widely with randomized search
+
+
+
+
+
+
+
+param_range = [0.0001, 0.001, 0.01, 0.1,
+               1.0, 10.0, 100.0, 1000.0]
+
+param_range = scipy.stats.loguniform(0.0001, 1000.0)
+
+np.random.seed(1)
+param_range.rvs(10)
+
+
+# ## More resource-efficient hyperparameter search with successive halving
+
+
+
+
+
+
+
+hs = HalvingRandomSearchCV(
+    pipe_svc,
+    param_distributions=param_grid,
+    n_candidates='exhaust',
+    resource='n_samples',
+    factor=1.5,
+    random_state=1,
+    n_jobs=-1)
+
+
+
+
+hs = hs.fit(X_train, y_train)
+print(hs.best_score_)
+print(hs.best_params_)
+
+
+
+
+clf = hs.best_estimator_
+print(f'Test accuracy: {hs.score(X_test, y_test):.3f}')
 
 
 
