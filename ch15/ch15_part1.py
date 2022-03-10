@@ -130,7 +130,7 @@ for t in range(3):
     print(f'Time step {t} =>')
     print('   Input           :', xt.numpy())
     
-    ht = torch.matmul(xt, torch.transpose(w_xh, 0, 1)) + b_hh    
+    ht = torch.matmul(xt, torch.transpose(w_xh, 0, 1)) + b_xh    
     print('   Hidden          :', ht.detach().numpy())
     
     if t>0:

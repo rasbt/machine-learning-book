@@ -22,3 +22,15 @@ Page 188
 The following import is missing:
 
     >>> import scipy.stats
+
+
+
+### Chapter 15
+
+Page 508
+
+In the following line
+
+    ht = torch.matmul(xt, torch.transpose(w_xh, 0, 1)) + b_hh
+    
+the bias should be  `b_xh` instead of `b_hh`. However, the resulting output is correct.
