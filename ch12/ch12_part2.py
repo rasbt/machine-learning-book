@@ -248,7 +248,7 @@ train_dl = DataLoader(train_ds, batch_size, shuffle=True)
 
 class Model(nn.Module):
     def __init__(self, input_size, hidden_size, output_size):
-        super(Model, self).__init__()
+        super().__init__()
         self.layer1 = nn.Linear(input_size, hidden_size)  
         self.layer2 = nn.Linear(hidden_size, output_size)  
 
