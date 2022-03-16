@@ -39,7 +39,7 @@ Here, the mean absolute deviation was computed
 58269.561754979375
 ```
 
-But it makes to compute the median absolute deviation
+But it makes more sense to compute the median absolute deviation
 
 ```python
 >>> def median_absolute_deviation(data):
