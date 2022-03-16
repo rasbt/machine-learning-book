@@ -8,7 +8,7 @@
 
 
 
-Page 24
+**Page 24**
 
 > It is important to note that the convergence of the perceptron is only guaranteed if the two classes are linearly separable, which means that the two classes cannot be perfectly separated by a linear decision boundary. 
 
@@ -18,7 +18,7 @@ Page 24
 
 ### Chapter 6
 
-Page 188
+**Page 188**
 
 The following import is missing:
 
@@ -27,7 +27,7 @@ The following import is missing:
 
 ### Chapter 12
 
-Page 380
+**Page 380**
 
 > We can also simply utilize the torch.utils.data.TensorDataset class, if the second dataset is a labeled dataset in the form of tensors. So, instead of using our self-defined Dataset class, JointDataset, we can create a joint dataset as follows:
 >
@@ -40,9 +40,20 @@ from torch.utils.data import TensorDataset
 joint_dataset = TensorDataset(t_x, t_y)
 ```
 
+**Page 397**
+
+In the line 
+
+```python
+accuracy_hist[epoch] += is_correct.mean()
+```
+
+it should be `is_correct.sum()` instead of `is_correct.mean()`. The resulting figures etc. are all correct, though.
+
+
 ### Chapter 15
 
-Page 508
+**Page 508**
 
 In the following line
 
