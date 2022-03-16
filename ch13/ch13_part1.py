@@ -563,7 +563,7 @@ ax.set_xlabel('Epochs', size=15)
 
 ax = fig.add_subplot(1, 3, 3)
 plot_decision_regions(X=x_valid.numpy(), 
-                      y=y_valid.numpy().astype(np.integer),
+                      y=y_valid.numpy().astype(np.int64),
                       clf=model)
 ax.set_xlabel(r'$x_1$', size=15)
 ax.xaxis.set_label_coords(1, -0.025)
