@@ -51,6 +51,22 @@ accuracy_hist[epoch] += is_correct.mean()
 it should be `is_correct.sum()` instead of `is_correct.mean()`. The resulting figures etc. are all correct, though.
 
 
+
+### Chapter 13
+
+**Page 422**
+
+In the lines
+
+```python
+... loss_hist_train[epoch] /= n_train
+... accuracy_hist_train[epoch] /= n_train/batch_size
+```
+
+The first line misses the `/batch_size`.
+
+
+
 ### Chapter 15
 
 **Page 508**
@@ -60,7 +76,6 @@ In the following line
     ht = torch.matmul(xt, torch.transpose(w_xh, 0, 1)) + b_hh
 
 the bias should be  `b_xh` instead of `b_hh`. However, the resulting output is correct.
-
 
 
 
