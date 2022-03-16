@@ -25,6 +25,31 @@ The following import is missing:
     >>> import scipy.stats
 
 
+
+### Chapter 9
+
+**Page 287**
+
+Here, the mean absolute deviation was computed
+
+```python
+>>> def mean_absolute_deviation(data):
+... return np.mean(np.abs(data - np.mean(data))) 
+>>> mean_absolute_deviation(y)
+58269.561754979375
+```
+
+But it makes to compute the median absolute deviation
+
+```python
+>>> def median_absolute_deviation(data):
+... return np.median(np.abs(data - np.median(data))) 
+>>> median_absolute_deviation(y)
+37000.00
+```
+
+
+
 ### Chapter 12
 
 **Page 380**
