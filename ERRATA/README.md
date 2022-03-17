@@ -7,6 +7,9 @@
 ### Chapter 2
 
 
+**Page 23**
+
+- It seems that the predicted label ŷ and the true label y got flipped.
 
 **Page 24**
 
