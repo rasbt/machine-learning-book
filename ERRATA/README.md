@@ -28,6 +28,15 @@ I remember that I was thinking about whether I should use the convenience term o
 
 ### Chapter 6
 
+**Page 185**
+
+The text says
+
+> In this case, the sweet spot appears to be between 0.01 and 0.1 of the C value.
+
+but "between 0.1 and 1.0" would have been more accurate. [[#27](https://github.com/rasbt/machine-learning-book/issues/27)]
+
+
 **Page 188**
 
 The following import is missing:
