@@ -58,7 +58,7 @@ check_packages(d)
 
 
 
-# ## Gender classification from face images using CNN
+# ## Smile classification from face images using CNN
 # 
 
 # ### Loading the CelebA dataset
@@ -261,7 +261,7 @@ valid_dl = DataLoader(celeba_valid_dataset, batch_size, shuffle=False)
 test_dl = DataLoader(celeba_test_dataset, batch_size, shuffle=False)
 
 
-# ### Training a CNN gender classifier
+# ### Training a CNN Smile classifier
 # 
 # * **Global Average Pooling**
 

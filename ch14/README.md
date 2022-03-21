@@ -22,10 +22,10 @@
   - Implementing a CNN using the TensorFlow Keras API
     - Configuring CNN layers in Keras
     - Constructing a CNN in Keras
-  - Gender classification from face images using a CNN
+  - Smile classification from face images using a CNN
     - Loading the CelebA dataset
     - Image transformation and data augmentation
-    - Training a CNN gender classifier
+    - Training a CNN smile classifier
 - Summary
 
 ### A note on using the code examples
