@@ -95,6 +95,10 @@ accuracy_hist[epoch] += is_correct.mean()
 it should be `is_correct.sum()` instead of `is_correct.mean()`. The resulting figures etc. are all correct, though.
 
 
+**Page 400**
+
+The word "multilabel" should be "multiclass". [[#35](https://github.com/rasbt/machine-learning-book/issues/35)]
+
 
 ### Chapter 13
 
