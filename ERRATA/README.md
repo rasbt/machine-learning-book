@@ -111,6 +111,14 @@ The first line misses the `/batch_size`.
 
 
 
+### Chapter 14
+
+**Page 472**
+
+In the figure, the `y_pred` value for the `BCELoss` is 0.8, but it should be 0.69, because of sigmoid(0.8) = 0.69. You can find an updated figure [here](../ch14/figures/14_11.png).
+
+
+
 ### Chapter 15
 
 **Page 508**
