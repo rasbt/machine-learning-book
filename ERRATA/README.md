@@ -121,6 +121,17 @@ The first line misses the `/batch_size`.
 
 In the figure, the `y_pred` value for the `BCELoss` is 0.8, but it should be 0.69, because of sigmoid(0.8) = 0.69. You can find an updated figure [here](../ch14/figures/14_11.png).
 
+Also, in the lines 
+
+```python
+... f'{cce_logits_loss_fn(logits, target):.4f}') CCE (w Probas): 0.5996
+>>> print(f'CCE (w Logits): '
+... f'{cce_loss_fn(torch.log(probas), target):.4f}') CCE (w Logits): 0.5996
+```
+
+the phrases `w Probas` and `w Logits` should be flipped.  [[#34](https://github.com/rasbt/machine-learning-book/issues/34)]
+
+
 
 
 ### Chapter 15
