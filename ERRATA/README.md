@@ -144,5 +144,7 @@ In the following line
 
 the bias should be  `b_xh` instead of `b_hh`. However, the resulting output is correct.
 
+**Page 532**
 
+`LogSoftmax(dim=1)` is not used when defining the model -- this is correct, because `nn.CrossEntropyLoss` is designed for logits, not log-probabilities. However, the output contains a false reference to `LogSoftmax(dim=1)` (this is a left-over from editing, and it can be ignored).  [[#37](https://github.com/rasbt/machine-learning-book/issues/37)]
 
