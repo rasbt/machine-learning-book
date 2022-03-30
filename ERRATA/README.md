@@ -67,7 +67,40 @@ But it makes more sense to compute the median absolute deviation
 37000.00
 ```
 
+### Chapter 11
 
+**Page 348:**
+
+The code comments for the `NeuralNetMLP`'s are outdated [[#23](https://github.com/rasbt/machine-learning-book/issues/23)]. Originally, I implemented the following computation
+
+```python
+z_h = np.dot(x, self.weight_h.T) + self.bias_h
+```
+
+via the equivalent 
+
+```python
+z_h = np.dot(self.weight_h, x.T).T + self.bias_h
+```
+
+(Note that in both cases `z_h` is exactly the same.)
+
+    
+The code comments reflect the second code line. For the first line, the code comment has to change and should be
+
+```python
+# input dim: [n_examples, n_features] dot [n_hidden, n_features].T
+# output dim: [n_examples, n_hidden]
+z_h = np.dot(x, self.weight_h.T) + self.bias_h
+```
+
+Similarly, the code comments for `z_out` should be 
+
+```python
+# input dim: [n_examples, n_hidden] dot [n_classes, n_hidden].T
+# output dim: [n_examples, n_classes]
+z_out = np.dot(a_h, self.weight_out.T) + self.bias_out
+```
 
 ### Chapter 12
 

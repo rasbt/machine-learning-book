@@ -218,14 +218,13 @@ class NeuralNetMLP:
         
     def forward(self, x):
         # Hidden layer
-        
-        # input dim: [n_hidden, n_features] dot [n_features, n_examples] .T
+        # input dim: [n_examples, n_features] dot [n_hidden, n_features].T
         # output dim: [n_examples, n_hidden]
         z_h = np.dot(x, self.weight_h.T) + self.bias_h
         a_h = sigmoid(z_h)
 
         # Output layer
-        # input dim: [n_classes, n_hidden] dot [n_hidden, n_examples] .T
+        # input dim: [n_examples, n_hidden] dot [n_classes, n_hidden].T
         # output dim: [n_examples, n_classes]
         z_out = np.dot(a_h, self.weight_out.T) + self.bias_out
         a_out = sigmoid(z_out)
