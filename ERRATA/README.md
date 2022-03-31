@@ -43,7 +43,9 @@ The following import is missing:
 
     >>> import scipy.stats
 
+**Page 200**
 
+It says "[...] via the `interp` function that we imported from SciPy" but we imported it from NumPy not SciPy.  [[#199](https://github.com/rasbt/machine-learning-book/issues/199)]
 
 ### Chapter 9
 
@@ -85,7 +87,7 @@ z_h = np.dot(self.weight_h, x.T).T + self.bias_h
 
 (Note that in both cases `z_h` is exactly the same.)
 
-    
+
 The code comments reflect the second code line. For the first line, the code comment has to change and should be
 
 ```python
