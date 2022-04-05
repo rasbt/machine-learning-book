@@ -127,6 +127,10 @@ from torch.utils.data import TensorDataset
 joint_dataset = TensorDataset(t_x, t_y)
 ```
 
+**Page 396**
+
+I was 99% sure I fixed that during editing, but on page 396, the `Model` has a `x = nn.Softmax(dim=1)(x)` layer that shouldn't be there.
+
 **Page 397**
 
 In the line 
