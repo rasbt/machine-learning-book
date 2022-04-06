@@ -26,6 +26,7 @@ For context:
 I remember that I was thinking about whether I should use the convenience term or not. I thought I cleaned this up, but it now looks like a weird hybrid where I introduce the convenience term but then don't use it.
 
 
+
 ### Chapter 6
 
 **Page 185**
@@ -68,6 +69,14 @@ But it makes more sense to compute the median absolute deviation
 >>> median_absolute_deviation(y)
 37000.00
 ```
+
+### Chapter 7
+
+**Page 242**
+
+The value -0.69 should be -0.67 as shown in the annotated screenshot below:
+
+![](images/242.png)
 
 ### Chapter 11
 
