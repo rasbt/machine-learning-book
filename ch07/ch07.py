@@ -733,6 +733,12 @@ print(update_if_wrong_1)
 
 
 
+update_if_wrong_2 = 0.1 * np.exp(-alpha_j * -1 * 1)
+print(update_if_wrong_2)
+
+
+
+
 weights = np.where(correct == 1, update_if_correct, update_if_wrong_1)
 print(weights)
 

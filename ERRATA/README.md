@@ -48,6 +48,28 @@ The following import is missing:
 
 It says "[...] via the `interp` function that we imported from SciPy" but we imported it from NumPy not SciPy.  [[#199](https://github.com/rasbt/machine-learning-book/issues/199)]
 
+
+
+### Chapter 7
+
+**Page 232**
+
+We have
+
+```python
+>>> update_if_wrong_2 = 0.1 * np.exp(-alpha_j * 1 * -1)
+>>> print(update_if_wrong_2)
+0.1527525231651947
+```
+
+but that looks exactly like the formula for `update_if_wrong_1`. The result is the same, but it would be more clear to change it to the following:
+
+```python
+>>> update_if_wrong_2 = 0.1 * np.exp(-alpha_j * -1 * 1)
+>>> print(update_if_wrong_2)
+0.1527525231651947
+```
+
 ### Chapter 9
 
 **Page 287**
