@@ -17,6 +17,13 @@ clf = pickle.load(open(os.path.join(cur_dir,
                  'classifier.pkl'), 'rb'))
 db = os.path.join(cur_dir, 'reviews.sqlite')
 
+def initialize_db():
+    conn = sqlite3.connect(db)
+    c = conn.cursor()
+    c.execute('CREATE TABLE IF NOT EXISTS review_db (review TEXT, sentiment INTEGER, date TEXT)')
+    conn.commit()
+    conn.close()
+
 def classify(document):
     label = {0: 'negative', 1: 'positive'}
     X = vect.transform([document])
@@ -74,4 +81,5 @@ def feedback():
     return render_template('thanks.html')
 
 if __name__ == '__main__':
+    initialize_db()
     app.run(debug=True)
