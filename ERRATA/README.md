@@ -253,6 +253,12 @@ In the following line
 
 the bias should be  `b_xh` instead of `b_hh`. However, the resulting output is correct.
 
+
+
+**Page 519**
+
+There is a sentence that says "Therefore, the embedding matrix in this case has the size 10×6." However, as it can be seen from the code, it should be "10×3" not "10×6". [[#36](https://github.com/rasbt/machine-learning-book/issues/36)]
+
 **Page 532**
 
 `LogSoftmax(dim=1)` is not used when defining the model -- this is correct, because `nn.CrossEntropyLoss` is designed for logits, not log-probabilities. However, the output contains a false reference to `LogSoftmax(dim=1)` (this is a left-over from editing, and it can be ignored).  [[#37](https://github.com/rasbt/machine-learning-book/issues/37)]
