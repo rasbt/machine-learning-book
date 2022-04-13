@@ -208,6 +208,23 @@ The first line misses the `/batch_size`.
 
 
 
+**Page 429**
+
+On page, we 419 defined the number of training examples as `n_train = 100`. On page 429 we then write 
+
+```python
+loss_hist_train[epoch] /= 100/batch_size
+accuracy_hist_train[epoch] /= 100/batch_size
+```
+
+It is technically not a mistake, but some readers may wonder where the `100/` comes from, so it might be clearer to write it as follows:
+
+```python
+loss_hist_train[epoch] /= n_train/batch_size
+accuracy_hist_train[epoch] /= n_train/
+```
+
+
 ### Chapter 14
 
 **Page 472**
@@ -223,7 +240,6 @@ Also, in the lines
 ```
 
 the phrases `w Probas` and `w Logits` should be flipped.  [[#34](https://github.com/rasbt/machine-learning-book/issues/34)]
-
 
 
 

@@ -532,8 +532,8 @@ for epoch in range(num_epochs):
         is_correct = ((pred>=0.5).float() == y_batch).float()
         accuracy_hist_train[epoch] += is_correct.mean()
 
-    loss_hist_train[epoch] /= 100/batch_size
-    accuracy_hist_train[epoch] /= 100/batch_size
+    loss_hist_train[epoch] /= n_train/batch_size
+    accuracy_hist_train[epoch] /= n_train/batch_size
 
     pred = model(x_valid)[:, 0]
     loss = loss_fn(pred, y_valid)
