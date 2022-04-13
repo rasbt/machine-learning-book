@@ -93,7 +93,10 @@ plt.show()
 
 X_train_norm = (X_train - np.mean(X_train)) / np.std(X_train)
 X_train_norm = torch.from_numpy(X_train_norm)
-y_train = torch.from_numpy(y_train)
+
+# On some computers the explicit cast to .float() is
+# necessary
+y_train = torch.from_numpy(y_train).float()
 
 train_ds = TensorDataset(X_train_norm, y_train)
 

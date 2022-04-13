@@ -26,6 +26,7 @@ For context:
 I remember that I was thinking about whether I should use the convenience term or not. I thought I cleaned this up, but it now looks like a weird hybrid where I introduce the convenience term but then don't use it.
 
 
+
 ### Chapter 6
 
 **Page 185**
@@ -43,7 +44,31 @@ The following import is missing:
 
     >>> import scipy.stats
 
+**Page 200**
 
+It says "[...] via the `interp` function that we imported from SciPy" but we imported it from NumPy not SciPy.  [[#199](https://github.com/rasbt/machine-learning-book/issues/199)]
+
+
+
+### Chapter 7
+
+**Page 232**
+
+We have
+
+```python
+>>> update_if_wrong_2 = 0.1 * np.exp(-alpha_j * 1 * -1)
+>>> print(update_if_wrong_2)
+0.1527525231651947
+```
+
+but that looks exactly like the formula for `update_if_wrong_1`. The result is the same, but it would be more clear to change it to the following:
+
+```python
+>>> update_if_wrong_2 = 0.1 * np.exp(-alpha_j * -1 * 1)
+>>> print(update_if_wrong_2)
+0.1527525231651947
+```
 
 ### Chapter 9
 
@@ -67,7 +92,56 @@ But it makes more sense to compute the median absolute deviation
 37000.00
 ```
 
+### Chapter 7
 
+**Page 242**
+
+The value -0.69 should be -0.67 as shown in the annotated screenshot below:
+
+![](images/242.png)
+
+### Chapter 11
+
+**Page 348:**
+
+The code comments for the `NeuralNetMLP`'s are outdated [[#23](https://github.com/rasbt/machine-learning-book/issues/23)]. Originally, I implemented the following computation
+
+```python
+z_h = np.dot(x, self.weight_h.T) + self.bias_h
+```
+
+via the equivalent 
+
+```python
+z_h = np.dot(self.weight_h, x.T).T + self.bias_h
+```
+
+(Note that in both cases `z_h` is exactly the same.)
+
+
+The code comments reflect the second code line. For the first line, the code comment has to change and should be
+
+```python
+# input dim: [n_examples, n_features] dot [n_hidden, n_features].T
+# output dim: [n_examples, n_hidden]
+z_h = np.dot(x, self.weight_h.T) + self.bias_h
+```
+
+Similarly, the code comments for `z_out` should be 
+
+```python
+# input dim: [n_examples, n_hidden] dot [n_classes, n_hidden].T
+# output dim: [n_examples, n_classes]
+z_out = np.dot(a_h, self.weight_out.T) + self.bias_out
+```
+
+
+
+**Page 366**
+
+There are two duplication errors on the page as shown in the figure below:
+
+![](images/366.png)
 
 ### Chapter 12
 
@@ -84,6 +158,25 @@ from torch.utils.data import TensorDataset
 joint_dataset = TensorDataset(t_x, t_y)
 ```
 
+**Page 391**
+
+On some computers, it is necessary to cast the tensor to a float tensor explicitely, that is, changing
+
+```python
+y_train = torch.from_numpy(y_train)
+```
+
+to 
+
+```python
+y_train = torch.from_numpy(y_train).float()
+```
+
+
+**Page 396**
+
+I was 99% sure I fixed that during editing, but on page 396, the `Model` has a `x = nn.Softmax(dim=1)(x)` layer that shouldn't be there.
+
 **Page 397**
 
 In the line 
@@ -94,6 +187,10 @@ accuracy_hist[epoch] += is_correct.mean()
 
 it should be `is_correct.sum()` instead of `is_correct.mean()`. The resulting figures etc. are all correct, though.
 
+
+**Page 400**
+
+The word "multilabel" should be "multiclass". [[#35](https://github.com/rasbt/machine-learning-book/issues/35)]
 
 
 ### Chapter 13
@@ -128,6 +225,23 @@ accuracy_hist_train[epoch] /= n_train/
 ```
 
 
+### Chapter 14
+
+**Page 472**
+
+In the figure, the `y_pred` value for the `BCELoss` is 0.8, but it should be 0.69, because of sigmoid(0.8) = 0.69. You can find an updated figure [here](../ch14/figures/14_11.png).
+
+Also, in the lines 
+
+```python
+... f'{cce_logits_loss_fn(logits, target):.4f}') CCE (w Probas): 0.5996
+>>> print(f'CCE (w Logits): '
+... f'{cce_loss_fn(torch.log(probas), target):.4f}') CCE (w Logits): 0.5996
+```
+
+the phrases `w Probas` and `w Logits` should be flipped.  [[#34](https://github.com/rasbt/machine-learning-book/issues/34)]
+
+
 
 ### Chapter 15
 
@@ -139,5 +253,12 @@ In the following line
 
 the bias should be  `b_xh` instead of `b_hh`. However, the resulting output is correct.
 
+**Page 532**
+
+`LogSoftmax(dim=1)` is not used when defining the model -- this is correct, because `nn.CrossEntropyLoss` is designed for logits, not log-probabilities. However, the output contains a false reference to `LogSoftmax(dim=1)` (this is a left-over from editing, and it can be ignored).  [[#37](https://github.com/rasbt/machine-learning-book/issues/37)]
 
 
+
+**Page 532**
+
+The learning rate (`lr=0.001`) is too low here. If we change it to `lr=0.005` we can get much better results.

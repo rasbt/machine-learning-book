@@ -210,7 +210,7 @@ model
 
 
 loss_fn = nn.CrossEntropyLoss()
-optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+optimizer = torch.optim.Adam(model.parameters(), lr=0.005)
 
 num_epochs = 10000 
 
@@ -324,28 +324,6 @@ print(sample(model, starting_str='The island',
 torch.manual_seed(1)
 print(sample(model, starting_str='The island', 
              scale_factor=0.5))
-
-
-# # Understanding language with the Transformer model
-# 
-# ## Understanding the self-attention mechanism
-# 
-# ## A basic version of self-attention
-# 
-# 
-
-
-
-
-
-# ### Parameterizing the self-attention mechanism with query, key, and value weights
-# 
-
-# 
-# ## Multi-head attention and the Transformer block
-
-
-
 
 
 # 

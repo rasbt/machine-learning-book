@@ -276,8 +276,8 @@ target = torch.tensor([2])
 cce_loss_fn = nn.NLLLoss()
 cce_logits_loss_fn = nn.CrossEntropyLoss()
 
-print(f'CCE (w Probas): {cce_logits_loss_fn(logits, target):.4f}')
-print(f'CCE (w Logits): {cce_loss_fn(torch.log(probas), target):.4f}')
+print(f'CCE (w Logits): {cce_logits_loss_fn(logits, target):.4f}')
+print(f'CCE (w Probas): {cce_loss_fn(torch.log(probas), target):.4f}')
 
 
 # ## Implementing a deep convolutional neural network using PyTorch
