@@ -1,3 +1,4 @@
+# the above Jupyter notebook magic writes the code in the cell to the provided file; must be the first line!
 from sklearn.feature_extraction.text import HashingVectorizer
 import re
 import os
