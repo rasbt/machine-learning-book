@@ -118,7 +118,7 @@ seq_length = 40
 chunk_size = seq_length + 1
 
 text_chunks = [text_encoded[i:i+chunk_size] 
-               for i in range(len(text_encoded)-chunk_size)] 
+               for i in range(len(text_encoded)-chunk_size+1)] 
 
 ## inspection:
 for seq in text_chunks[:1]:

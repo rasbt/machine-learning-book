@@ -259,6 +259,24 @@ the bias should be  `b_xh` instead of `b_hh`. However, the resulting output is c
 
 There is a sentence that says "Therefore, the embedding matrix in this case has the size 10×6." However, as it can be seen from the code, it should be "10×3" not "10×6". [[#36](https://github.com/rasbt/machine-learning-book/issues/36)]
 
+**Page 530**
+
+It would not make any difference because of the newline characters at the end, but to be technically correct, we should add a `+1` to the `chunk_size` in
+
+```python
+>>> text_chunks = [text_encoded[i:i+chunk_size]
+... for i in range(len(text_encoded)-chunk_size)]
+```
+
+I.e.,
+
+```python
+>>> text_chunks = [text_encoded[i:i+chunk_size]
+... for i in range(len(text_encoded)-chunk_size+1)]
+```
+
+
+
 **Page 532**
 
 `LogSoftmax(dim=1)` is not used when defining the model -- this is correct, because `nn.CrossEntropyLoss` is designed for logits, not log-probabilities. However, the output contains a false reference to `LogSoftmax(dim=1)` (this is a left-over from editing, and it can be ignored).  [[#37](https://github.com/rasbt/machine-learning-book/issues/37)]
