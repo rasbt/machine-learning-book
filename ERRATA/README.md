@@ -275,6 +275,8 @@ I.e.,
 ... for i in range(len(text_encoded)-chunk_size+1)]
 ```
 
+(Via [[#38](https://github.com/rasbt/machine-learning-book/issues/38)].)
+
 
 
 **Page 532**
