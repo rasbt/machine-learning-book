@@ -245,6 +245,10 @@ the phrases `w Probas` and `w Logits` should be flipped.  [[#34](https://github.
 
 ### Chapter 15
 
+**Page 483**
+
+Not an errata, but it would be good to clarify in the infobox that users have to unzip the `img_align_celeba.zip` file, which is inside the unzipped `celeba` folder.
+
 **Page 508**
 
 In the following line
