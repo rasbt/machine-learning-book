@@ -249,6 +249,12 @@ the phrases `w Probas` and `w Logits` should be flipped.  [[#34](https://github.
 
 Not an errata, but it would be good to clarify in the infobox that users have to unzip the `img_align_celeba.zip` file, which is inside the unzipped `celeba` folder.
 
+
+**Page 488**
+
+The correct smile attribute is not `attr[18]` but `attr[31]`. Consequently, the plot on pg. 495 will look a bit different. The test accuracy on pg. 496 will be around 90.21%. And the pictures on pg. 497 will look a bit different. The [ch14_part2.ipynb](../ch14/ch14_part2.ipynb) Jupyter notebook in this GitHub repository was updated accordingly :).
+
+
 **Page 508**
 
 In the following line
