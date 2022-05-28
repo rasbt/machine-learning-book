@@ -63,6 +63,19 @@ check_packages(d)
 
 # ### Loading the CelebA dataset
 
+# You can try setting `download=True` in the code cell below, however due to the daily download limits of the CelebA dataset, this will probably result in an error. Alternatively, we recommend trying the following:
+# 
+# - You can download the files from the official CelebA website manually (https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) 
+# - or use our download link, https://drive.google.com/file/d/1m8-EBPgi5MRubrm6iQjafK2QMHDBMSfJ/view?usp=sharing (recommended). 
+# 
+# If you use our download link, it will download a `celeba.zip` file, 
+# 
+# 1. which you need to unpack in the current directory where you are running the code. 
+# 2. In addition, **please also make sure you unzip the `img_align_celeba.zip` file, which is inside the `celeba` folder.**
+# 3. Also, after downloading and unzipping the celeba folder, you need to run with the setting `download=False` instead of `download=True` (as shown in the code cell below).
+# 
+# In case you are encountering problems with this approach, please do not hesitate to open a new issue or start a discussion at https://github.com/ rasbt/machine-learning-book so that we can provide you with additional information.
+
 
 
 
@@ -226,6 +239,7 @@ for j in range(num_epochs):
     
 #plt.savefig('figures/14_16.png', dpi=300)
 plt.show()
+
 
 
 
