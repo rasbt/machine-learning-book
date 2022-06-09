@@ -25,7 +25,11 @@ For context:
 
 I remember that I was thinking about whether I should use the convenience term or not. I thought I cleaned this up, but it now looks like a weird hybrid where I introduce the convenience term but then don't use it.
 
+**Page 38**
 
+In the MSE derivative, there is a spot where the summation is over *i* but it should be over *j*:
+
+![](./images/38.png)
 
 ### Chapter 6
 
