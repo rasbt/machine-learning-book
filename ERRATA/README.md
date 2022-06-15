@@ -31,6 +31,10 @@ In the MSE derivative, there is a spot where the summation is over *i* but it sh
 
 ![](./images/38.png)
 
+### Chapter 3
+
+It should be *logical_xor* instead of *logical_or* in the text.
+
 ### Chapter 6
 
 **Page 185**
