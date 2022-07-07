@@ -16,12 +16,9 @@
     - Working with multiple input or color channels
     - Regularizing an NN with dropout
   - Loss functions for classification
-- Implementing a deep CNN using TensorFlow
+- Implementing a deep CNN using PyTorch
   - The multilayer CNN architecture
   - Loading and preprocessing the data
-  - Implementing a CNN using the TensorFlow Keras API
-    - Configuring CNN layers in Keras
-    - Constructing a CNN in Keras
   - Smile classification from face images using a CNN
     - Loading the CelebA dataset
     - Image transformation and data augmentation

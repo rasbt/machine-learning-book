@@ -35,6 +35,12 @@ In the MSE derivative, there is a spot where the summation is over *i* but it sh
 
 It should be *logical_xor* instead of *logical_or* in the text.
 
+**Page 60**
+
+The correct link is: https://www.youtube.com/watch?v=L0FU8NFpx4E instead of  https://www.youtube.com/L0FU8NFpx4E.
+
+
+
 ### Chapter 6
 
 **Page 185**
@@ -179,6 +185,25 @@ to
 ```python
 y_train = torch.from_numpy(y_train).float()
 ```
+
+
+
+**Page 392**
+
+To be more explicit and to improve compatibility with certain computing environment, the line 
+
+```python
+loss = loss_fn(pred, y_batch)
+```
+
+should be changed to
+
+```python
+loss = loss_fn(pred, y_batch.long())
+```
+
+
+
 
 
 **Page 396**

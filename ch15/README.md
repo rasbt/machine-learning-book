@@ -16,14 +16,14 @@
   - Hidden-recurrence versus output-recurrence
   - The challenges of learning long-range interactions
   - Long short-term memory cells
-- Implementing RNNs for sequence modeling in TensorFlow
+- Implementing RNNs for sequence modeling in PyTorch
   - Project one: predicting the sentiment of IMDb movie reviews
     - Preparing the movie review data
     - Embedding layers for sentence encoding
     - Building an RNN model
     - Building an RNN model for the sentiment analysis task
       - More on the bidirectional RNN
-  - Project two: character-level language modeling in TensorFlow
+  - Project two: character-level language modeling in PyTorch
     - Preprocessing the dataset
     - Building a character-level RNN model
     - Evaluation phase: generating new text passages

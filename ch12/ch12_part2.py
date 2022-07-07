@@ -285,7 +285,7 @@ for epoch in range(num_epochs):
 
     for x_batch, y_batch in train_dl:
         pred = model(x_batch)
-        loss = loss_fn(pred, y_batch)
+        loss = loss_fn(pred.long(), y_batch)
         loss.backward()
         optimizer.step()
         optimizer.zero_grad()
