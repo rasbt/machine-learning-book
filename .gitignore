@@ -36,3 +36,6 @@ doc/_build
 *ENV
 .DS_store
 .idea
+
+# Other
+.python-version
