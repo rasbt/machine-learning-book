@@ -9,4 +9,5 @@ dependencies:
   - python=3.8.10
   - matplotlib=3.4.3
   - scikit-learn=1.0
+  - jupyterlab=3.4.4
 prefix: /opt/miniconda3/envs/machine-learning-book
