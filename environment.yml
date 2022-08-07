@@ -1,0 +1,12 @@
+name: machine-learning-book
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - numpy=1.21.2
+  - pandas=1.3.2
+  - scipy=1.7.0
+  - python=3.8.10
+  - matplotlib=3.4.3
+  - scikit-learn=1.0
+prefix: /opt/miniconda3/envs/machine-learning-book
