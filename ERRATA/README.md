@@ -114,9 +114,23 @@ The value -0.69 should be -0.67 as shown in the annotated screenshot below:
 
 ![](images/242.png)
 
+
+
+### Chapter 9
+
+**Page 291**
+
+In original text of the first paragraph in  p. 291
+
+> We can see that the MSE on the training dataset is **larger**  than on the test set, which is an indicator that our model is slightly overfitting the training data in this case. 
+
+should be corrected as follows:
+
+> We can see that the MSE on the training dataset is **less**  than on the test set, which is an indicator that our model is slightly overfitting the training data in this case.
+
 ### Chapter 11
 
-**Page 348:**
+**Page 34:**
 
 The code comments for the `NeuralNetMLP`'s are outdated [[#23](https://github.com/rasbt/machine-learning-book/issues/23)]. Originally, I implemented the following computation
 
