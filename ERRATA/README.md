@@ -128,6 +128,20 @@ should be corrected as follows:
 
 > We can see that the MSE on the training dataset is **less**  than on the test set, which is an indicator that our model is slightly overfitting the training data in this case.
 
+**Page 292**
+
+Not an error, but in the proof showing that the $$R^2$$ is a rescaled version of the MSE,
+
+$$
+\begin{aligned}
+&R^{2}=1-\frac{S S E}{S S T}\\
+&=\frac{\frac{1}{n} \sum_{i=1}^{n}\left(y^{(i)}-\hat{y}^{(i)}\right)^{2}}{\frac{1}{n} \sum_{i=1}^{n}\left(y^{(i)}-\mu_{y}\right)^{2}}\\
+&=1-\frac{M S E}{\operatorname{Var}(y)}
+\end{aligned}
+$$
+
+it might be good to insert $=1-\frac{\frac{1}{n} S S E}{\frac{1}{n} S S T}$ after the first line to make it easier to follow.
+
 ### Chapter 11
 
 **Page 34:**
