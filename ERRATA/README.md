@@ -133,14 +133,22 @@ should be corrected as follows:
 Not an error, but in the proof showing that the $$R^2$$ is a rescaled version of the MSE,
 
 $$
-\begin{aligned}
-&R^{2}=1-\frac{S S E}{S S T}\\
-&=\frac{\frac{1}{n} \sum_{i=1}^{n}\left(y^{(i)}-\hat{y}^{(i)}\right)^{2}}{\frac{1}{n} \sum_{i=1}^{n}\left(y^{(i)}-\mu_{y}\right)^{2}}\\
-&=1-\frac{M S E}{\operatorname{Var}(y)}
-\end{aligned}
+\begin{align*}
+R^2 
+&= 1 - \frac{SSE}{SST} \\
+&= 1 - \frac{ \frac{1}{n} \sum_{i=1}^{n} \big ( y^{(i)} - \hat{y}^{(i)} \big )^{2} }
+        { \frac{1}{n} \sum_{i=1}^{n} \big ( y^{(i)} - \mu_{y} \big )^{2} } \\
+&= 1 - \frac{MSE}{Var(y)}
+\end{align*}
 $$
 
-it might be good to insert $=1-\frac{\frac{1}{n} S S E}{\frac{1}{n} S S T}$ after the first line to make it easier to follow.
+it might be good to insert 
+
+$$
+= 1 - \frac{\frac{1}{n}SSE}{\frac{1}{n}SST}
+$$
+
+after the first line to make it easier to follow.
 
 ### Chapter 11
 
