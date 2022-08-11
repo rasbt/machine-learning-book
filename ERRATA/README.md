@@ -186,14 +186,29 @@ z_out = np.dot(a_h, self.weight_out.T) + self.bias_out
 ```
 
 
+### Chapter 8
+
+**Page 261**
+
+An improved version:
+
+Change `text.lower()` to `text` in
+
+
+```python
+emoticons = re.findall('(?::|;|=)(?:-)?(?:\)|\(|D|P)', text.lower())   
+```
+
+to catch emoticons like ":-P"
+
+### Chapter 12
+
 
 **Page 366**
 
 There are two duplication errors on the page as shown in the figure below:
 
 ![](images/366.png)
-
-### Chapter 12
 
 **Page 380**
 
