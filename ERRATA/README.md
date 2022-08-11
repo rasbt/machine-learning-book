@@ -108,11 +108,32 @@ But it makes more sense to compute the median absolute deviation
 
 ### Chapter 7
 
+**Pages 228 & 236**
+
+The labels "Alcohol" and "OD280/OD315 of diluted wines" should be flipped in the code (and the resulting figure).
+
 **Page 242**
 
 The value -0.69 should be -0.67 as shown in the annotated screenshot below:
 
 ![](images/242.png)
+
+
+
+### Chapter 8
+
+**Page 261**
+
+An improved version:
+
+Change `text.lower()` to `text` in
+
+
+```python
+emoticons = re.findall('(?::|;|=)(?:-)?(?:\)|\(|D|P)', text.lower())   
+```
+
+to catch emoticons like ":-P"
 
 
 
@@ -185,30 +206,17 @@ Similarly, the code comments for `z_out` should be
 z_out = np.dot(a_h, self.weight_out.T) + self.bias_out
 ```
 
-
-### Chapter 8
-
-**Page 261**
-
-An improved version:
-
-Change `text.lower()` to `text` in
-
-
-```python
-emoticons = re.findall('(?::|;|=)(?:-)?(?:\)|\(|D|P)', text.lower())   
-```
-
-to catch emoticons like ":-P"
-
-### Chapter 12
-
-
 **Page 366**
 
 There are two duplication errors on the page as shown in the figure below:
 
 ![](images/366.png)
+
+
+
+### Chapter 12
+
+
 
 **Page 380**
 

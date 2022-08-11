@@ -674,11 +674,11 @@ for idx, clf, tt in zip([0, 1],
 
     axarr[idx].set_title(tt)
 
-axarr[0].set_ylabel('Alcohol', fontsize=12)
+axarr[0].set_ylabel('OD280/OD315 of diluted wines', fontsize=12)
 
 plt.tight_layout()
 plt.text(0, -0.2,
-         s='OD280/OD315 of diluted wines',
+         s='Alcohol',
          ha='center',
          va='center',
          fontsize=12,
@@ -813,17 +813,17 @@ for idx, clf, tt in zip([0, 1],
                        c='green', marker='o')
     axarr[idx].set_title(tt)
 
-axarr[0].set_ylabel('Alcohol', fontsize=12)
+axarr[0].set_ylabel('OD280/OD315 of diluted wines', fontsize=12)
 
 plt.tight_layout()
 plt.text(0, -0.2,
-         s='OD280/OD315 of diluted wines',
+         s='Alcohol',
          ha='center',
          va='center',
          fontsize=12,
          transform=axarr[1].transAxes)
 
-#plt.savefig('figures/07_11.png', dpi=300, bbox_inches='tight')
+# plt.savefig('figures/07_11.png', dpi=300, bbox_inches='tight')
 plt.show()
 
 
