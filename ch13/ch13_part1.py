@@ -206,7 +206,6 @@ nn.init.xavier_uniform_(model[0].weight)
  
 l1_weight = 0.01
 l1_penalty = l1_weight * model[2].weight.abs().sum()
- 
 
 
 # #### Compiling a model
@@ -245,6 +244,8 @@ plt.plot(x[y==1, 0],
          x[y==1, 1], '<', alpha=0.75, markersize=10)
 plt.xlabel(r'$x_1$', size=15)
 plt.ylabel(r'$x_2$', size=15)
+
+#plt.savefig('figures/13_02.png', dpi=300)
 plt.show()
 
 
@@ -321,7 +322,8 @@ plt.plot(history[2], lw=4)
 plt.plot(history[3], lw=4)
 plt.legend(['Train acc.', 'Validation acc.'], fontsize=15)
 ax.set_xlabel('Epochs', size=15)
- 
+
+#plt.savefig('figures/13_03.png', dpi=300)
 
 
 
@@ -339,13 +341,11 @@ loss_fn = nn.BCELoss()
 optimizer = torch.optim.SGD(model.parameters(), lr=0.015)
 
 model
- 
 
 
 
 
 history = train(model, num_epochs, train_dl, x_valid, y_valid)
- 
 
 
 
@@ -362,6 +362,8 @@ plt.plot(history[2], lw=4)
 plt.plot(history[3], lw=4)
 plt.legend(['Train acc.', 'Validation acc.'], fontsize=15)
 ax.set_xlabel('Epochs', size=15)
+
+plt.savefig('figures/13_04.png', dpi=300)
 
 
 # ## Making model building more flexible with nn.Module
@@ -429,7 +431,7 @@ ax.set_xlabel('Epochs', size=15)
 
 ax = fig.add_subplot(1, 3, 3)
 plot_decision_regions(X=x_valid.numpy(), 
-                      y=y_valid.numpy().astype(np.integer),
+                      y=y_valid.numpy().astype(np.int64),
                       clf=model)
 ax.set_xlabel(r'$x_1$', size=15)
 ax.xaxis.set_label_coords(1, -0.025)
@@ -540,8 +542,6 @@ for epoch in range(num_epochs):
     loss_hist_valid[epoch] = loss.item()
     is_correct = ((pred>=0.5).float() == y_valid).float()
     accuracy_hist_valid[epoch] += is_correct.mean()
- 
- 
 
 
 
