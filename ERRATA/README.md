@@ -338,6 +338,10 @@ Also, in the lines
 
 the phrases `w Probas` and `w Logits` should be flipped.  [[#34](https://github.com/rasbt/machine-learning-book/issues/34)]
 
+**Page 477**
+
+The square brackets [ ] on this page are layout errors and should be floor symbols ⌊ ⌋
+
 
 
 
