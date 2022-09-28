@@ -19,6 +19,8 @@ If you are already a conda user, you can skip the next section and get all the r
 make -f Makefile
 ```
 
+from the main folder in this repository.
+
 
 
 ## Setting Up Your Python Environment (Manually)
