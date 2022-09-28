@@ -377,6 +377,9 @@ In the following line
 
 the bias should be  `b_xh` instead of `b_hh`. However, the resulting output is correct.
 
+Also, the line at the bottom is missing the closing bracket
+
+    print(' Hidden :', ht.detach().numpy())
 
 
 **Page 519**
