@@ -8,7 +8,20 @@ Python Machine Learning - Code Examples
 
 
 
-## Setting Up Your Python Environment
+## For Existing Conda Users: Creating a New Conda Environment (Optional)
+
+
+
+If you are already a conda user, you can skip the next section and get all the recommended package versions in a fresh conda environment (called "pyml-book") via
+
+
+```
+make -f Makefile
+```
+
+
+
+## Setting Up Your Python Environment (Manually)
 
 This chapter does not contain any code examples, but we recommend you to set up and check your Python before your proceed with the next chapters.
 
@@ -21,13 +34,13 @@ For more detailed setup instructions, please refer to the section ***Installing 
 If you are using conda (we recommend installing conda via [Miniforge](https://github.com/conda-forge/miniforge)), you can create a new environment as follows:
 
 ```bash
-conda create -n "pyml" python=3.9 numpy=1.21.2 scipy=1.7.0 scikit-learn=1.0 matplotlib=3.4.3 pandas=1.3.2
+conda create -n "pyml-book" python=3.9 numpy=1.21.2 scipy=1.7.0 scikit-learn=1.0 matplotlib=3.4.3 pandas=1.3.2
 ```
 
 After creating this environment, you can activate it via
 
 ```bash
-conda activate "pyml"
+conda activate "pyml-book"
 ```
 
 
@@ -46,8 +59,8 @@ You can create a new virtual environment with a specific Python version using [v
 ```bash
 pip install virtualenv
 cd /path/to/where/you/want/your/environment
-virtualenv pyml
-source pyml/bin/activate 
+virtualenv pyml-book
+source pyml-book/bin/activate 
 ```
 
 After activating your environment, you can install the required packages via
