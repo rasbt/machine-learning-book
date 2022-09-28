@@ -65,8 +65,18 @@ Sebastian Raschka, Yuxi (Hayden) Liu, and Vahid Mirjalili. *Machine Learning wit
     title = {{Machine Learning with PyTorch and Scikit-Learn}},  
     year = {2022}  
     }
-    
-    
+
+​    
+
+## Coding Environment
+
+
+
+Please see the [ch01/README.md](ch01/README.md) file for setup recommendations.
+
+
+
+
 ## Translations into other Languages
 
 - Serbian Translation: [Mašinsko učenje uz PyTorch i Scikit-Learn](https://knjige.kombib.rs/masinsko-ucenje-uz-pytorch-i-scikit-learn).
