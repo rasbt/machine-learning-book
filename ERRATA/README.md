@@ -225,7 +225,7 @@ Test
 the training example index is missing; it should be 
 
 $$
-L(\mathbf{W}, \mathbf{b})=\frac{1}{n} \sum_{i=1}^n \frac{1}{t} \sum_{j=1}^t\left(y_j^{[i]}-a_j^{(o u t}[[i])^2\right.
+L(\mathbf{W}, \mathbf{b})=\frac{1}{n} \sum_{i=1}^n \frac{1}{t} \sum_{j=1}^t\left(y_j^{[i]}-a_j^{(o u t)[i]}\right)^2
 $$
 
 **Page 366**
