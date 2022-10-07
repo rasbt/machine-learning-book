@@ -443,6 +443,10 @@ The learning rate (`lr=0.001`) is too low here. If we change it to `lr=0.005` we
 
 ### Chapter 17
 
+**Page 617**
+
+In the sentence "The last convolutional layer uses kernels of size 7×7" it should have been "4×4".
+
 **Page 626**
 
 One of the KL divergence formulas, i.e., $K L(P \| Q)=-\sum_i P\left(x_i\right) \frac{P\left(x_i\right)}{Q\left(x_i\right)}$,  is missing the log. It should be
