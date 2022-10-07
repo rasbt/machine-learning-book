@@ -213,33 +213,20 @@ z_out = np.dot(a_h, self.weight_out.T) + self.bias_out
 
 In the equation 
 
-```math
-L \big ( \mathbf{W}, \mathbf{b} \big ) =
-\frac{1}{n} \sum_{1}^{n} \frac{1}{t} \sum_{j=1}^{t} \big( y_{j}^{[i]} - a_{j}^{(out)[i]} \big )^{2}
-```
+$$
+L(\mathbf{W}, \mathbf{b})=\frac{1}{n} \sum_1^n \frac{1}{t} \sum_{j=1}^t\left(y_j^{[i]}-a_j^{(o u t)[i]}\right)^2
+$$
 
 Test
 
 
 
-$\sum_i$
-
-
-$$
-\sum_i
-$$
-
-```math
-\sum_i
-```
-
-
-
-
 
 the training example index is missing; it should be 
-$$L \big ( \mathbf{W}, \mathbf{b} \big ) =
-\frac{1}{n} \sum_{i=1}^{n} \frac{1}{t} \sum_{j=1}^{t} \big( y_{j}^{[i]} - a_{j}^{(out)[i]} \big )^{2}$$
+
+$$
+L(\mathbf{W}, \mathbf{b})=\frac{1}{n} \sum_{i=1}^n \frac{1}{t} \sum_{j=1}^t\left(y_j^{[i]}-a_j^{(o u t}[[i])^2\right.
+$$
 
 **Page 366**
 
