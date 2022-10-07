@@ -440,3 +440,11 @@ I.e.,
 **Page 532**
 
 The learning rate (`lr=0.001`) is too low here. If we change it to `lr=0.005` we can get much better results.
+
+
+
+### Chapter 18
+
+**Page 650**
+
+Add the bottom of Figure 18.9, it should have been h_fc x W_fc instead of W_fc x h_fc. It's updated  [here](https://github.com/rasbt/machine-learning-book/blob/main/ch18/figures/18_09.png) now.
