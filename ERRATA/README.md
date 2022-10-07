@@ -218,6 +218,25 @@ L \big ( \mathbf{W}, \mathbf{b} \big ) =
 \frac{1}{n} \sum_{1}^{n} \frac{1}{t} \sum_{j=1}^{t} \big( y_{j}^{[i]} - a_{j}^{(out)[i]} \big )^{2}
 ```
 
+Test
+
+
+
+$\sum_i$
+
+
+$$
+\sum_i
+$$
+
+```math
+\sum_i
+```
+
+
+
+
+
 the training example index is missing; it should be 
 $$L \big ( \mathbf{W}, \mathbf{b} \big ) =
 \frac{1}{n} \sum_{i=1}^{n} \frac{1}{t} \sum_{j=1}^{t} \big( y_{j}^{[i]} - a_{j}^{(out)[i]} \big )^{2}$$
