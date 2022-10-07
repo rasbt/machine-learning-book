@@ -176,6 +176,16 @@ after the first line to make it easier to follow.
 
 It would be better to use [ ] for the training example index for consistency later in this chapter.
 
+**Page 340:**
+
+In the second paragraph, $w_{j, k}(l)$ should be $w_{j, k}(l+1)$.
+
+**Page 342:**
+
+In paragraph 3, "$z(h)$ is our 1×m dimensional feature vector" should be  "$x(in)$ is our 1×m dimensional feature vector" 
+
+Last paragraph: "(The columns in this matrix represent the outputs for each sample.)" should be "(The rows in this matrix represent the outputs for each example.)"
+
 **Page 348:**
 
 The code comments for the `NeuralNetMLP`'s are outdated [[#23](https://github.com/rasbt/machine-learning-book/issues/23)]. Originally, I implemented the following computation
