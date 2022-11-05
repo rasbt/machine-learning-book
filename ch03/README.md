@@ -9,7 +9,7 @@
   - Learning the weights of the logistic cost function
   - Converting an Adaline implementation into an algorithm for logistic regression
   - Training a logistic regression model with scikit-learn
-  - Tackling over tting via regularization
+  - Tackling overfitting via regularization
 - Maximum margin classification with support vector machines
   - Maximum margin intuition
   - Dealing with a nonlinearly separable case using slack variables

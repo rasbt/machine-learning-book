@@ -19,7 +19,7 @@
   - Dynamic programming using the Bellman equation
 - Reinforcement learning algorithms
   - Dynamic programming
-    - Policy evaluation – predicting the value function with dynamic programmin
+    - Policy evaluation – predicting the value function with dynamic programming
     - Improving the policy using the estimated value function
     - Policy iteration
     - Value iteration
