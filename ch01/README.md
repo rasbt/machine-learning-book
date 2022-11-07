@@ -25,7 +25,7 @@ from the main folder in this repository.
 
 ## Setting Up Your Python Environment (Manually)
 
-This chapter does not contain any code examples, but we recommend you to set up and check your Python before your proceed with the next chapters.
+This chapter does not contain any code examples, but we recommend you to set up and check your Python before you proceed with the next chapters.
 
 For more detailed setup instructions, please refer to the section ***Installing Python and packages from the Python Package Index*** in Chapter 1.
 
