@@ -2,7 +2,15 @@
 
 
 
-No errata entries so far. 
+## Chapter 15
+
+**Page 530**
+
+The line `from torch.utils.data import Dataset` appears twice.
+
+
+
+---
 
 
 
