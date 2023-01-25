@@ -56,7 +56,7 @@ After successfully installing Anaconda/Miniconda, we can create virtual environm
 ## Manually create env and install packages
 
 ```bash
-    conda create -n ml python=3.9 # create new ml environment
+    conda create -n ml python=3.10 # create new ml environment
     conda env list # list all the avialable virtual environments
     conda activate ml #activate ml environment
     conda install <SomePackage> #install packages
@@ -117,7 +117,9 @@ We can use the Conda installer if we have Anaconda or Miniconda installed:
 ```bash
     git clone https://github.com/rambasnet/python-machine-learning.git
     git branch --show # show the current branch; if not basnet, checkout basnet
-    git checkout basnet 
+    git branch -r # show all remote branches
+    git pull origin basnet # pull remote branch called basnet
+    git switch basnet # switch the working branch 
 ```
 
 - to open a Jupyter notebook, we `cd` to the directory that contains your notebooks, e.g,.
