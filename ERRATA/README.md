@@ -8,6 +8,10 @@ The doc strings of the LogisticRegressionGD classifier reference "Mean squared e
 
 ## Chapter 11
 
+**Page 341**
+
+Add bias unit to the net input.
+
 **Page 361**
 
 $$\frac{\partial}{\partial w_{j, l}^{(l)}}=L(\boldsymbol{W}, \boldsymbol{b})$$ 
