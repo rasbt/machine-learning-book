@@ -314,7 +314,7 @@ class LogisticRegressionGD:
     b_ : Scalar
       Bias unit after fitting.
     losses_ : list
-      Mean squared error loss function values in each epoch.
+      Log loss function values in each epoch.
 
     """
     def __init__(self, eta=0.01, n_iter=50, random_state=1):
