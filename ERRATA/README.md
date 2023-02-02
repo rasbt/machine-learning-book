@@ -1,12 +1,16 @@
 # Current Errata
 
+**Page 361**
 
+$$\frac{\partial}{\partial w_{j, l}^{(l)}}=L(\boldsymbol{W}, \boldsymbol{b})$$ 
+
+should be 
+
+$$\frac{\partial L}{\partial w_{j, l}^{(l)}}$$ 
 
 ## Chapter 15
 
-**Page 361**
 
-$$\frac{\partial}{\partial w_{j, l}^{(l)}}=L(\boldsymbol{W}, \boldsymbol{b})$$ should be $$\frac{\partial L}{\partial w_{j, l}^{(l)}}$$ 
 
 **Page 530**
 
