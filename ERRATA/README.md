@@ -1,5 +1,11 @@
 # Current Errata
 
+## Chapter 3
+
+**Page 66**
+
+The doc strings of the LogisticRegressionGD classifier reference "Mean squared error loss" -- this is a copy-paste error and should be "Log loss".
+
 ## Chapter 11
 
 **Page 361**
