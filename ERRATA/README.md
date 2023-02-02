@@ -1,5 +1,7 @@
 # Current Errata
 
+## Chapter 11
+
 **Page 361**
 
 $$\frac{\partial}{\partial w_{j, l}^{(l)}}=L(\boldsymbol{W}, \boldsymbol{b})$$ 
