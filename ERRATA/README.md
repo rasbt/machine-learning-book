@@ -20,6 +20,12 @@ should be
 
 $$\frac{\partial L}{\partial w_{j, l}^{(l)}}$$ 
 
+## Chapter 18
+
+**Page 380**
+
+We use `TensorDataset` even though we defined the custom `JointDataset`
+
 ## Chapter 15
 
 
