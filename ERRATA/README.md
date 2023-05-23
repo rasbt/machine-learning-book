@@ -20,11 +20,31 @@ should be
 
 $$\frac{\partial L}{\partial w_{j, l}^{(l)}}$$ 
 
-## Chapter 18
+## Chapter 12
 
 **Page 380**
 
 We use `TensorDataset` even though we defined the custom `JointDataset`
+
+## Chapter 13
+
+**Page 431**
+
+When using Torchmetrics 0.8.0 or newer, the following lines
+
+```python
+self.train_acc = Accuracy()
+self.valid_acc = Accuracy()
+self.test_acc = Accuracy()
+```
+
+need to be changed to
+
+```python
+self.train_acc = Accuracy(task="multiclass", num_classes=10)
+self.valid_acc = Accuracy(task="multiclass", num_classes=10)
+self.test_acc = Accuracy(task="multiclass", num_classes=10)
+```
 
 ## Chapter 15
 
