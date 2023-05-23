@@ -1,11 +1,13 @@
 # coding: utf-8
 
 
+from pkg_resources import parse_version
 import sys
 from python_environment_check import check_packages
 import pytorch_lightning as pl
 import torch 
 import torch.nn as nn 
+from torchmetrics import __version__ as torchmetrics_version
 from torchmetrics import Accuracy
 from torch.utils.data import DataLoader
 from torch.utils.data import random_split
@@ -72,9 +74,15 @@ class MultiLayerPerceptron(pl.LightningModule):
         super().__init__()
         
         # new PL attributes:
-        self.train_acc = Accuracy()
-        self.valid_acc = Accuracy()
-        self.test_acc = Accuracy()
+        
+        if parse_version(torchmetrics_version) > parse_version(0.8):
+            self.train_acc = Accuracy(task="multiclass", num_classes=10)
+            self.valid_acc = Accuracy(task="multiclass", num_classes=10)
+            self.test_acc = Accuracy(task="multiclass", num_classes=10)
+        else:
+            self.train_acc = Accuracy()
+            self.valid_acc = Accuracy()
+            self.test_acc = Accuracy()
         
         # Model similar to previous section:
         input_size = image_shape[0] * image_shape[1] * image_shape[2] 
