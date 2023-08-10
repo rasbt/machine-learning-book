@@ -24,7 +24,9 @@ Kindle ASIN: B09NW48MR1
 
 ## Table of Contents and Code Notebooks
 
-**Helpful installation and setup instructions can be found in the [README.md file of Chapter 1](ch01/README.md)**
+**Helpful installation and setup instructions can be found in the [README.md file of Chapter 1](ch01/README.md)**.
+
+**In addition, Zbynek Bazanowski contributed [this helpful guide](supplementary/running-on-colab.pdf) explaining how to run the code examples on Google Colab.**
 
 **Please note that these are just the code examples accompanying the book, which we uploaded for your convenience; be aware that these notebooks may not be useful without the formulae and descriptive text.**   
 
