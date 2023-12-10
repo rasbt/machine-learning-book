@@ -2,6 +2,10 @@
 
 ## Chapter 3
 
+**Page 63**
+
+A small stylistic issue: The summation symbol at the bottom currently shows $$\sum_{i=1}$$ but should be either $$\sum_{i}$$ or $$\sum_{i=1}^{n}$$.
+
 **Page 66**
 
 The doc strings of the LogisticRegressionGD classifier reference "Mean squared error loss" -- this is a copy-paste error and should be "Log loss".
