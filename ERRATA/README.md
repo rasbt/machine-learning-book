@@ -12,6 +12,10 @@ The doc strings of the LogisticRegressionGD classifier reference "Mean squared e
 
 Add bias unit to the net input.
 
+**Page 354**
+
+The MSE is normalized via `mse = mse/i` but should be normalized via `mse = mse/(i+1)` instead. (This does not affect the results in shown below though. The MSE is still 0.3.)
+
 **Page 361**
 
 $$\frac{\partial}{\partial w_{j, l}^{(l)}}=L(\boldsymbol{W}, \boldsymbol{b})$$ 
@@ -19,6 +23,8 @@ $$\frac{\partial}{\partial w_{j, l}^{(l)}}=L(\boldsymbol{W}, \boldsymbol{b})$$
 should be 
 
 $$\frac{\partial L}{\partial w_{j, l}^{(l)}}$$ 
+
+
 
 ## Chapter 12
 

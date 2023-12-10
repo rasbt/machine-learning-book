@@ -375,7 +375,7 @@ def compute_mse_and_acc(nnet, X, y, num_labels=10, minibatch_size=100):
         num_examples += targets.shape[0]
         mse += loss
 
-    mse = mse/i
+    mse = mse/(i+1)
     acc = correct_pred/num_examples
     return mse, acc
 
