@@ -10,6 +10,10 @@ A small stylistic issue: The summation symbol at the bottom currently shows $\su
 
 The doc strings of the LogisticRegressionGD classifier reference "Mean squared error loss" -- this is a copy-paste error and should be "Log loss".
 
+**Page 84**
+
+A larger gamma value should create a smaller (not larger) radius.
+
 ## Chapter 11
 
 **Page 341**
