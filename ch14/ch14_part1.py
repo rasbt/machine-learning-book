@@ -167,10 +167,10 @@ def conv2d(X, W, p=(0, 0), s=(1, 1)):
 
     res = []
     for i in range(0, int((X_padded.shape[0] - 
-                           W_rot.shape[0])/s[0])+1, s[0]):
+                           W_rot.shape[0])/s[0])+s[0], s[0]):
         res.append([])
         for j in range(0, int((X_padded.shape[1] - 
-                               W_rot.shape[1])/s[1])+1, s[1]):
+                               W_rot.shape[1])/s[1])+s[1], s[1]):
             X_sub = X_padded[i:i+W_rot.shape[0],
                              j:j+W_rot.shape[1]]
             res[-1].append(np.sum(X_sub * W_rot))
