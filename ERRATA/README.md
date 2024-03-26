@@ -44,7 +44,7 @@ We use `TensorDataset` even though we defined the custom `JointDataset`
 
 **Page 459**
 
-The `conv1d()` function on page 459 was improved through a kind [pull request](https://github.com/rasbt/machine-learning-book/pull/168) by [@JaGeo](https://github.com/JaGeo), enabling it to handle cases with strides different from (1,1).
+The `conv1d()` and `conv2d()` functions on page 459 was improved through a kind [pull request](https://github.com/rasbt/machine-learning-book/pull/168) by [@JaGeo](https://github.com/JaGeo), enabling it to handle cases with strides different from (1,1).
 
 ## Chapter 13
 
