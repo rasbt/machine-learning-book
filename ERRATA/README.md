@@ -133,13 +133,15 @@ should be
 \mathbf{o}^{\left( t \right)} = \sigma_{o}\left( \mathbf{W}_{ho}\mathbf{h}^{\left( t \right)}+\mathbf{b}_{o} \right)
 ```
 
-
-
 **Page 530**
 
 The line `from torch.utils.data import Dataset` appears twice.
 
+## Chapter 16
 
+**Page 547**
+
+Not an error, but where we are summing over the columns via `attention_weights.sum(dim=1)`, we could mention that this matrix is symmetric and that we could also sum over the rows and get the same results.
 
 ---
 
