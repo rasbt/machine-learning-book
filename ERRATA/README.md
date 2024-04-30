@@ -4,7 +4,23 @@
 
 **Page 63**
 
-A small stylistic issue: The summation symbol at the bottom currently shows $\sum_{i=1}$ but should be either $\sum_{i}$ or $\sum_{i=1}^{n}$.
+A small stylistic issue: The summation symbol at the bottom currently shows 
+
+```math
+\sum_{i=1}
+```
+
+ but should be either 
+ 
+ ```math
+ \sum_{i}
+```
+
+or 
+
+```math
+\sum_{i=1}^{n}
+```
 
 **Page 66**
 
@@ -26,12 +42,31 @@ The MSE is normalized via `mse = mse/i` but should be normalized via `mse = mse/
 
 **Page 366**
 
-It says $\frac{\partial L}{\partial w_{1,1}^{(\text {out })}} = ...$ but should be $\frac{\partial L}{\partial w_{1,1}^{(\text {h })}}$ to match the figure above and text below.
+It says 
+
+```math
+\frac{\partial L}{\partial w_{1,1}^{(\text {out })}} = ...
+```
+
+ but should be 
+ 
+ ```math
+\frac{\partial L}{\partial w_{1,1}^{(\text {h })}}
+```
+
+to match the figure above and text below.
 
 **Page 361**
 
-$\frac{\partial}{\partial w_{j, l}^{(l)}}=L(\boldsymbol{W}, \boldsymbol{b})$ should be $\frac{\partial L}{\partial w_{j, l}^{(l)}}$
+```math
+\frac{\partial}{\partial w_{j, l}^{(l)}}=L(\boldsymbol{W}, \boldsymbol{b}) 
+```
 
+should be 
+
+```math
+\frac{\partial L}{\partial w_{j, l}^{(l)}}
+```
 
 
 ## Chapter 12
@@ -67,6 +102,19 @@ self.test_acc = Accuracy(task="multiclass", num_classes=10)
 ```
 
 ## Chapter 15
+
+**Page 505**
+
+The equation is technically correct, but it looks like the character 0 (zero) was used instead of the letter o:
+
+```math
+\mathbf{o}^{\left( t \right)} = \sigma_{0}\left( \mathbf{W}_{ho}\mathbf{h}^{\left( t \right)}+\mathbf{b}_{0} \right)
+```
+should be
+
+```math
+\mathbf{o}^{\left( t \right)} = \sigma_{o}\left( \mathbf{W}_{ho}\mathbf{h}^{\left( t \right)}+\mathbf{b}_{o} \right)
+```
 
 
 
