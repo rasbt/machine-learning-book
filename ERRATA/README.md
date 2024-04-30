@@ -101,6 +101,23 @@ self.valid_acc = Accuracy(task="multiclass", num_classes=10)
 self.test_acc = Accuracy(task="multiclass", num_classes=10)
 ```
 
+## Chapter 14
+
+**Page 489**
+
+Not an error, but for legibility, it would be good to change 
+
+```python
+for j in range(num_epochs):
+    img_batch, label_batch = next(iter(data_loader))
+```
+
+to
+
+```python
+for img_batch, label_batch in data_loader:
+```
+
 ## Chapter 15
 
 **Page 505**
