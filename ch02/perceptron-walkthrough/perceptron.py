@@ -56,7 +56,11 @@ class Perceptron:
                 self.w_ += update * xi
                 self.b_ += update
                 errors += int(update != 0.0)
-            self.errors_.append(errors)
+            self.errors_.append(errors) 
+            # For each iteration, in n_iter, you'd ideally want to 
+            # see the number of errors in self.errors_ decline and
+            # apporach zero, as our weights become more refined
+            # with each iteration
         return self
     
     def net_input(self, X):
