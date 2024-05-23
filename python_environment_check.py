@@ -37,13 +37,13 @@ def check_packages(d):
         if actual_ver == 'N/A':
             continue
         actual_ver, suggested_ver = LooseVersion(actual_ver), LooseVersion(suggested_ver)
-        if pkg_name == "matplotlib" and actual_ver >= LooseVersion("3.8"):
-            print(f'[FAIL] {pkg_name} {actual_ver}, please upgrade to {suggested_ver} >= matplotlib <= 3.8')
+        if pkg_name == "matplotlib" and actual_ver == LooseVersion("3.8"):
+            print(f'[FAIL] {pkg_name} {actual_ver}, please upgrade to {suggested_ver} >= matplotlib > 3.8')
         elif actual_ver < suggested_ver:
             print(f'[FAIL] {pkg_name} {actual_ver}, please upgrade to >= {suggested_ver}')
         else:
             print(f'[OK] {pkg_name} {actual_ver}')
-            
+
 
 
 if __name__ == '__main__':
