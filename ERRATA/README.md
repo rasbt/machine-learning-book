@@ -4,21 +4,49 @@
 
 Not an errata but an improvement suggestion. Currently, we have the following paragraph in the "Notational Conventions" section:
 
----
 
 We will use lowercase, bold-face letters to refer to vectors ($\mathbf{x} \in \mathbb{R}^{n \times 1}$) and uppercase, bold-face letters to refer to matrices $(\mathbf{X} \in \mathbb{R}^{n \times m}$). To refer to single elements in a vector or matrix, we will write the letters in italics $(x^{(n)}$ or $x_m^{(n)}$, respectively).
 
----
 
 This can be improved as follows:
 
 
-
----
-
 We will use lowercase, bold-face letters to refer to vectors ($\mathbf{x} \in \mathbb{R}^{n \times 1}$ for column vectors and $\mathbf{x} \in \mathbb{R}^{1 \times m}$ for row vectors) and uppercase, bold-face letters to refer to matrices $(\mathbf{X} \in \mathbb{R}^{n \times m}$). To refer to single elements in a vector or matrix, we will write the letters in italics $(x^{(n)}$ or $x_m^{(n)}$, respectively).
 
----
+In addition, in the same box, 
+
+$$
+\mathbf{X}^{(i)} = \left[ x_1^{(i)} \, x_2^{(i)} \, x_3^{(i)} \, x_4^{(i)} \right]
+$$
+
+can be changed to
+
+$$
+\mathbf{x}^{(i)} = \left[ x_1^{(i)} \, x_2^{(i)} \, x_3^{(i)} \, x_4^{(i)} \right], \quad 1 \leq i \leq n.
+$$
+
+And
+
+$$
+\mathbf{x}_j = \left[ \begin{array}{c}
+x_j^{(1)} \\
+x_j^{(2)} \\
+\vdots \\
+x_j^{(150)}
+\end{array} \right]
+$$
+
+can be changed to
+
+$$
+\mathbf{x}_j = \left[ \begin{array}{c}
+x_j^{(1)} \\
+x_j^{(2)} \\
+\vdots \\
+x_j^{(150)}
+\end{array} \right], \quad i \leq j \leq m.
+$$
+
 
 
 ## Chapter 3
