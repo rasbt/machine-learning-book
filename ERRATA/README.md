@@ -1,5 +1,26 @@
 # Current Errata
 
+## Chapter 1
+
+Not an errata but an improvement suggestion. Currently, we have the following paragraph in the "Notational Conventions" section:
+
+---
+
+We will use lowercase, bold-face letters to refer to vectors ($\mathbf{x} \in \mathbb{R}^{n \times 1}$) and uppercase, bold-face letters to refer to matrices $(\mathbf{X} \in \mathbb{R}^{n \times m}$). To refer to single elements in a vector or matrix, we will write the letters in italics $(x^{(n)}$ or $x_m^{(n)}$, respectively).
+
+---
+
+This can be improved as follows:
+
+
+
+---
+
+We will use lowercase, bold-face letters to refer to vectors ($\mathbf{x} \in \mathbb{R}^{n \times 1}$ for column vectors and $\mathbf{x} \in \mathbb{R}^{1 \times m}$ for row vectors) and uppercase, bold-face letters to refer to matrices $(\mathbf{X} \in \mathbb{R}^{n \times m}$). To refer to single elements in a vector or matrix, we will write the letters in italics $(x^{(n)}$ or $x_m^{(n)}$, respectively).
+
+---
+
+
 ## Chapter 3
 
 **Page 63**
