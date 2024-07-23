@@ -16,6 +16,7 @@ import re
 from nltk.stem.porter import PorterStemmer
 import nltk
 from nltk.corpus import stopwords
+from packaging import version
 from sklearn.pipeline import Pipeline
 from sklearn.linear_model import LogisticRegression
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -28,6 +29,7 @@ from sklearn.linear_model import SGDClassifier
 from distutils.version import LooseVersion as Version
 from sklearn import __version__ as sklearn_version
 from sklearn.decomposition import LatentDirichletAllocation
+
 
 # # Machine Learning with PyTorch and Scikit-Learn  
 # # -- Code Examples
@@ -155,8 +157,13 @@ for s in ('test', 'train'):
             with open(os.path.join(path, file), 
                       'r', encoding='utf-8') as infile:
                 txt = infile.read()
-            df = df.append([[txt, labels[l]]], 
-                           ignore_index=True)
+            if version.parse(pd.__version__) >= version.parse("1.3.2"):
+                x = pd.DataFrame([[txt, labels[l]]], columns=['review', 'sentiment'])
+                df = pd.concat([df, x], ignore_index=False)
+
+            else:
+                df = df.append([[txt, labels[l]]], 
+                               ignore_index=True)
             pbar.update()
 df.columns = ['review', 'sentiment']
 
