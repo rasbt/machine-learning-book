@@ -1,6 +1,6 @@
 # coding: utf-8
 
-
+from packaging import version
 import sys
 from python_environment_check import check_packages
 from sklearn.datasets import make_blobs
@@ -450,18 +450,34 @@ plt.show()
 
 
 
-ac = AgglomerativeClustering(n_clusters=3, 
-                             affinity='euclidean', 
-                             linkage='complete')
+if version.parse(sklearn.__version__) > version.parse("1.2"):
+    ac = AgglomerativeClustering(n_clusters=3,
+                                 metric="euclidean",
+                                 linkage="complete"
+                                )
+else:
+    ac = AgglomerativeClustering(n_clusters=3,
+                                 affinity="euclidean",
+                                 linkage="complete"
+                                )
+
 labels = ac.fit_predict(X)
 print(f'Cluster labels: {labels}')
 
 
 
 
-ac = AgglomerativeClustering(n_clusters=2, 
-                             affinity='euclidean', 
-                             linkage='complete')
+if version.parse(sklearn.__version__) > version.parse("1.2"):
+    ac = AgglomerativeClustering(n_clusters=2,
+                                 metric="euclidean",
+                                 linkage="complete"
+                                )
+else:
+    ac = AgglomerativeClustering(n_clusters=2,
+                                 affinity="euclidean",
+                                 linkage="complete"
+                                )
+
 labels = ac.fit_predict(X)
 print(f'Cluster labels: {labels}')
 
