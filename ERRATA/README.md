@@ -124,6 +124,10 @@ should be
 
 We use `TensorDataset` even though we defined the custom `JointDataset`
 
+**Page 393**
+
+The line `y_pred = model(X_test_norm).detach().numpy()` should be changed to just `y_pred = model(X_test_norm)` to avoid detaching twice, which know raises an error in PyTorch 2.x.
+
 ## Chapter 14
 
 **Page 459**
