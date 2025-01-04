@@ -1,5 +1,6 @@
 # Current Errata
 
+&nbsp;
 ## Chapter 1
 
 Not an errata but an improvement suggestion. Currently, we have the following paragraph in the "Notational Conventions" section:
@@ -48,7 +49,7 @@ x_j^{(150)}
 $$
 
 
-
+&nbsp;
 ## Chapter 3
 
 **Page 63**
@@ -60,10 +61,10 @@ A small stylistic issue: The summation symbol at the bottom currently shows
 ```
 
  but should be either 
- 
+
  ```math
  \sum_{i}
-```
+ ```
 
 or 
 
@@ -79,6 +80,7 @@ The doc strings of the LogisticRegressionGD classifier reference "Mean squared e
 
 A larger gamma value should create a smaller (not larger) radius.
 
+&nbsp;
 ## Chapter 11
 
 **Page 341**
@@ -98,10 +100,10 @@ It says
 ```
 
  but should be 
- 
+
  ```math
 \frac{\partial L}{\partial w_{1,1}^{(\text {h })}}
-```
+ ```
 
 to match the figure above and text below.
 
@@ -118,6 +120,7 @@ should be
 ```
 
 
+&nbsp;
 ## Chapter 12
 
 **Page 380**
@@ -128,13 +131,6 @@ We use `TensorDataset` even though we defined the custom `JointDataset`
 
 The line `y_pred = model(X_test_norm).detach().numpy()` should be changed to just `y_pred = model(X_test_norm)` to avoid detaching twice, which know raises an error in PyTorch 2.x.
 
-## Chapter 14
-
-**Page 459**
-
-The `conv1d()` and `conv2d()` functions on page 459 was improved through a kind [pull request](https://github.com/rasbt/machine-learning-book/pull/168) by [@JaGeo](https://github.com/JaGeo), enabling it to handle cases with strides different from (1,1).
-
-## Chapter 13
 
 **Page 431**
 
@@ -154,7 +150,14 @@ self.valid_acc = Accuracy(task="multiclass", num_classes=10)
 self.test_acc = Accuracy(task="multiclass", num_classes=10)
 ```
 
+&nbsp;
 ## Chapter 14
+
+
+**Page 459**
+
+The `conv1d()` and `conv2d()` functions on page 459 was improved through a kind [pull request](https://github.com/rasbt/machine-learning-book/pull/168) by [@JaGeo](https://github.com/JaGeo), enabling it to handle cases with strides different from (1,1).
+
 
 **Page 489**
 
@@ -171,6 +174,7 @@ to
 for img_batch, label_batch in data_loader:
 ```
 
+&nbsp;
 ## Chapter 15
 
 **Page 505**
@@ -190,6 +194,7 @@ should be
 
 The line `from torch.utils.data import Dataset` appears twice.
 
+&nbsp;
 ## Chapter 16
 
 **Page 547**
@@ -198,6 +203,22 @@ Not an error, but where we are summing over the columns via `attention_weights.s
 
 ---
 
+&nbsp;
+## Chapter 17
+
+**Page 626**
+
+There seems to be a mistake in the KL information box. The minus sign should either be removed or the P(x)/Q(x) should be changed to  Q(x)/P(x). In addition, there log sign seems missing. Correct formulas are
+
+```math
+KL(P \| Q) = -\sum_{i} P(x_i) \log \frac{Q(x_i)}{P(x_i)}
+```
+
+or
+
+```math
+KL(P \| Q) = \sum_{i} P(x_i) \log \frac{P(x_i)}{Q(x_i)}
+```
 
 
 For books printed before 16 Nov 2022, please see the [Old Errata](old-errata).
