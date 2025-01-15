@@ -81,6 +81,19 @@ The doc strings of the LogisticRegressionGD classifier reference "Mean squared e
 A larger gamma value should create a smaller (not larger) radius.
 
 &nbsp;
+## Chapter 4
+
+In the code block, it says
+
+```python
+# Note that C=1.0 is the default. You can increase
+# or decrease it to make the regulariztion effect
+# stronger or weaker, respectively.
+```
+
+But should have been "weaker or stronger" not "stronger or weaker"
+
+&nbsp;
 ## Chapter 11
 
 **Page 341**
