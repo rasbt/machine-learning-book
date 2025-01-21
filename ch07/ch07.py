@@ -179,9 +179,15 @@ np.argmax(p)
 
 
 
+# Scikit-learn 0.16 and newer requires reversing the parent classes
+# See https://github.com/rasbt/machine-learning-book/discussions/205 for more details
+import sklearn
+base_classes = (ClassifierMixin, BaseEstimator) if sklearn.__version__ >= "0.16" else (BaseEstimator, ClassifierMixin)
 
-class MajorityVoteClassifier(BaseEstimator, 
-                             ClassifierMixin):
+# class MajorityVoteClassifier(BaseEstimator, 
+#                             ClassifierMixin):
+
+class MajorityVoteClassifier(*base_classes):
     """ A majority vote ensemble classifier
 
     Parameters
