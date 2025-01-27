@@ -94,6 +94,13 @@ In the code block, it says
 But should have been "weaker or stronger" not "stronger or weaker"
 
 &nbsp;
+## Chapter 6
+
+**Page 185**
+
+In the Figure 6.6 caption, it currently says "...SVM hyperparameter C" but it should say "...logistic regression hyperparameter C".
+
+&nbsp;
 ## Chapter 11
 
 **Page 341**
