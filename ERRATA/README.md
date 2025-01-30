@@ -101,6 +101,13 @@ But should have been "weaker or stronger" not "stronger or weaker"
 In the Figure 6.6 caption, it currently says "...SVM hyperparameter C" but it should say "...logistic regression hyperparameter C".
 
 &nbsp;
+## Chapter 10
+
+**Page 313**
+
+In the sentence "...identify the value of k where the distortion begins to increase most rapidly..." *decrease* would be the more correct term as we read the figure from left to right (not right to left).
+
+&nbsp;
 ## Chapter 11
 
 **Page 341**
