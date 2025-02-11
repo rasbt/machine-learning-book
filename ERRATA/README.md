@@ -150,6 +150,18 @@ should be
 &nbsp;
 ## Chapter 12
 
+**Page 376**
+
+The text says 
+
+> For this, PyTorch provides a convenient torch.chunk() function, which divides an input tensor into a list of equally
+sized tensors. [...] If the tensor size is not divisible by the chunks value, the last chunk will be smaller.
+
+But this is not necessarily true. A better way to say this, as suggested in the discussion [#203](https://github.com/rasbt/machine-learning-book/discussions/203), is
+
+> If the tensor size is not divisible by the chunks value, the resulting number of chunks may be less than intended and/or the last chunk may be smaller than the others.
+
+
 **Page 380**
 
 We use `TensorDataset` even though we defined the custom `JointDataset`
