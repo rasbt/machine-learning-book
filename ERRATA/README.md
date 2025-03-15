@@ -203,6 +203,9 @@ model reaches 100 percent accuracy on the training dataset. The validation datas
 
 But the values should be 90% training accuracy and 85% validation accuracy.
 
+**Page 432**
+
+The line `import sklearn.model_selection` is redundant and can be removed.
 
 &nbsp;
 ## Chapter 14
