@@ -189,6 +189,21 @@ self.valid_acc = Accuracy(task="multiclass", num_classes=10)
 self.test_acc = Accuracy(task="multiclass", num_classes=10)
 ```
 
+
+&nbsp;
+## Chapter 13
+
+
+**Page 423**
+
+At the bottom of this page, it says
+
+> and the
+model reaches 100 percent accuracy on the training dataset. The validation dataset’s accuracy is 95 percent, which indicates that the model is slightly overfitting.
+
+But the values should be 90% training accuracy and 85% validation accuracy.
+
+
 &nbsp;
 ## Chapter 14
 
