@@ -538,7 +538,7 @@ class SBS:
     def __init__(self, estimator, k_features, scoring=accuracy_score,
                  test_size=0.25, random_state=1):
         self.scoring = scoring
-        self.estimator = clone(estimator)
+        self.estimator = estimator
         self.k_features = k_features
         self.test_size = test_size
         self.random_state = random_state
@@ -579,8 +579,9 @@ class SBS:
         return X[:, self.indices_]
 
     def _calc_score(self, X_train, y_train, X_test, y_test, indices):
-        self.estimator.fit(X_train[:, indices], y_train)
-        y_pred = self.estimator.predict(X_test[:, indices])
+        estimator = clone(self.estimator)
+        estimator.fit(X_train[:, indices], y_train)
+        y_pred = estimator.predict(X_test[:, indices])
         score = self.scoring(y_test, y_pred)
         return score
 
@@ -688,7 +689,3 @@ for f in range(X_selected.shape[1]):
 # ---
 # 
 # Readers may ignore the next cell.
-
-
-
-
