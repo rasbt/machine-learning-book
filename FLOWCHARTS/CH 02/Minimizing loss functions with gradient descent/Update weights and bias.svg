@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="windows-1252"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="400 56.256 402 587.633" xmlns:latexdraw="http://latexdraw.sourceforge.net/namespaces/latexdraw" version="1.1" baseProfile="full">
+    <g>
+        <g latexdraw:type="rectangle" id="id1695788522">
+            <rect x="422.5999999999999" y="77.25555555555538" width="356.4000000000001" height="87.60000000000012" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="none"/>
+        </g>
+        <g latexdraw:type="text" id="id580029296" fill="black" latexdraw:position="bl">
+            <text x="446.8999999999999" y="113.55555555555556">Compute the weight's partial derivative</text>
+        </g>
+        <g latexdraw:type="text" id="id475381715" fill="black" latexdraw:position="bl">
+            <text x="478.1" y="149.55555555555577">$\frac{\partial L}{\partial w_j} = \frac{-2}{n} \sum_i{(y^{(i)} - \sigma(z^{(i)}))}x_j^{(i)}$</text>
+        </g>
+        <g latexdraw:type="text" id="id199643826" fill="black" latexdraw:position="bl">
+            <text x="460.4000000000003" y="244.53333333333282">Compute the bias's partial derivative</text>
+        </g>
+        <g latexdraw:type="text" id="id350406893" fill="black" latexdraw:position="bl">
+            <text x="497.466666666667" y="273.3333333333333">$\large \frac{\partial L}{\partial b} = \frac{-2}{n} \sum_i{(y^{(i)} - \sigma(z^{(i)}))}$</text>
+        </g>
+        <g latexdraw:type="text" id="id1069186504" fill="black" latexdraw:position="bl">
+            <text x="557.6666666666664" y="389.31111111111113">$\Delta w_j = \eta \frac{\partial L}{\partial w_j}$</text>
+        </g>
+        <g latexdraw:type="text" id="id1051254662" fill="black" latexdraw:position="bl">
+            <text x="563.833333333333" y="425.3777777777776">$\Delta b = \eta \frac{\partial L}{\partial b}$</text>
+        </g>
+        <g latexdraw:type="text" id="id1871397329" fill="black" latexdraw:position="bl">
+            <text x="523.2666666666668" y="511.15555555555534">Update the weights</text>
+        </g>
+        <g latexdraw:type="text" id="id1556826044" fill="black" latexdraw:position="bl">
+            <text x="542.4666666666666" y="535.1555555555557">$ \textbf{w}:=\textbf{w}+\Delta \textbf{w} $</text>
+        </g>
+        <g latexdraw:type="text" id="id264196513" fill="black" latexdraw:position="bl">
+            <text x="529.9" y="586.4222222222226">Update the bias</text>
+        </g>
+        <g latexdraw:type="text" id="id1033159445" fill="black" latexdraw:position="bl">
+            <text x="550.1999999999996" y="607.9555555555559">$b:=b+\Delta b$</text>
+        </g>
+        <g latexdraw:type="rectangle" id="id597707571">
+            <rect x="421.39999999999986" y="207.96666666666647" width="357.60000000000014" height="87.60000000000014" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="none"/>
+        </g>
+        <g latexdraw:type="rectangle" id="id260531865">
+            <rect x="421.0" y="344.4111111111116" width="358.0" height="87.60000000000025" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="none"/>
+        </g>
+        <g latexdraw:type="rectangle" id="id210989270">
+            <rect x="423.0" y="482.52222222222326" width="358.0" height="140.36666666666554" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="none"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id599681486">
+            <polyline points="590.0,165.0 590.0,205.0 " stroke="black" stroke-width="2.0" fill="none" latexdraw:rotationAngle="0.0" marker-end="url(#arrow1-599681486)"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id1578858155">
+            <polyline points="590.0,295.0 590.0,345.0 " stroke="black" stroke-width="2.0" fill="none" latexdraw:rotationAngle="0.0" marker-end="url(#arrow1-1578858155)"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id1042217278">
+            <polyline points="590.0,430.0 590.0,480.0 " stroke="black" stroke-width="2.0" fill="none" latexdraw:rotationAngle="0.0" marker-end="url(#arrow1-1042217278)"/>
+        </g>
+    </g>
+    <defs>
+        <marker overflow="visible" markerUnits="userSpaceOnUse" orient="90" id="arrow1-599681486">
+            <path d="M 0.0 0.0 L -9.304166666666667 -3.322916666666667 L -9.304166666666667 0.0 L -9.304166666666667 3.322916666666667 z" fill="black" stroke="black" latexdraw:arrSizeNum="2" latexdraw:tbarSizeNum="5"/>
+        </marker>
+        <marker overflow="visible" markerUnits="userSpaceOnUse" orient="90" id="arrow1-1578858155">
+            <path d="M 0.0 0.0 L -9.304166666666667 -3.322916666666667 L -9.304166666666667 0.0 L -9.304166666666667 3.322916666666667 z" fill="black" stroke="black" latexdraw:arrSizeNum="2" latexdraw:tbarSizeNum="5"/>
+        </marker>
+        <marker overflow="visible" markerUnits="userSpaceOnUse" orient="90" id="arrow1-1042217278">
+            <path d="M 0.0 0.0 L -9.304166666666667 -3.322916666666667 L -9.304166666666667 0.0 L -9.304166666666667 3.322916666666667 z" fill="black" stroke="black" latexdraw:arrSizeNum="2" latexdraw:tbarSizeNum="5"/>
+        </marker>
+    </defs>
+    <metadata>
+        <latexdraw:metadata>
+            <latexdraw:centreHoriz>false</latexdraw:centreHoriz>
+            <latexdraw:positionVert/>
+            <latexdraw:zoom>0.9</latexdraw:zoom>
+            <latexdraw:vpx>0.497</latexdraw:vpx>
+            <latexdraw:vpy>0.403</latexdraw:vpy>
+        </latexdraw:metadata>
+    </metadata>
+</svg>
